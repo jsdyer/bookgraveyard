@@ -47,7 +47,8 @@ def main():
                 page.route('https://openlibrary.org/**', source)
                 page.goto(f'http://127.0.0.1:{server.server_port}/bookgraveyard/')
                 page.locator('.book-card').first.wait_for()
-                assert 'Retained opening search' in page.locator('#capture-label').inner_text()
+                # Assert source text: the caption is visually uppercased by CSS.
+                assert 'Retained opening search' in page.locator('#capture-label').text_content()
                 assert len(requests) == 0, 'Page load must not query the provider'
                 initial_count = page.locator('.book-card').count()
                 page.locator('#query').fill('papermaking')
@@ -57,9 +58,9 @@ def main():
                 assert 'subject=papermaking' in requests[-1]
                 assert page.locator('.book-card').count() == initial_count
                 assert page.locator('.book-card img').count() == 0
-                assert '<img src=x' in page.locator('.book-card h3').first.inner_text()
+                assert '<img src=x' in page.locator('.book-card h3').first.text_content()
                 page.get_by_role('button', name='+ Your shelf', exact=True).first.click()
-                assert page.locator('#shelf-count').inner_text() == '1'
+                assert page.locator('#shelf-count').text_content() == '1'
                 with page.expect_download() as saved:
                     page.locator('#export-shelf').click()
                 shelf_path = Path(temporary)/'shelf.json'
