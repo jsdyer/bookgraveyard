@@ -1,37 +1,52 @@
-import { cleanLines } from './model.mjs';
-const input = document.querySelector('#input');
-const output = document.querySelector('#output');
-const status = document.querySelector('#status');
-const copy = document.querySelector('#copy');
-function update() {
-  const result = cleanLines(input.value);
-  output.value = result.text;
-  status.textContent = `${result.count} unique ${result.count === 1 ? 'line' : 'lines'}; ${result.removed} ${result.removed === 1 ? 'duplicate' : 'duplicates'} removed.`;
-  copy.disabled = result.count === 0;
+import {ORIGIN,validateConfig,searchURL,sourceSearch,editionsURL,normalizeSearch,normalizeEdition,accessLabel,validateReceipt,makeReceipt,addToShelf,csv} from './model.mjs';
+const $=id=>document.getElementById(id);
+const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
+const link=(text,href)=>{const a=el('a',text);a.href=href;a.target='_blank';a.rel='noopener noreferrer';return a;};
+const button=(text,fn,cls='quiet')=>{const b=el('button',text,cls);b.type='button';b.addEventListener('click',fn);return b;};
+let config,state=null,shelf=[],editionState=null,selected=[],lastRequest=0,blockedUntil=0,requestQueue=Promise.resolve(),editionSequence=0;
+const cache=new Map();const shelfKey='coolcode:bookgraveyard:shelf';
+function message(id,text,error=false){$(id).textContent=text;$(id).classList.toggle('error',error);}
+const date=v=>new Date(v).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short',timeZone:'UTC'})+' UTC';
+function inputs(){return Object.fromEntries(['query','field','from','to','access','sort'].map(k=>[k,$(k).value]));}
+function fill(query){for(const key of ['query','field','from','to','access','sort'])$(key).value=query[key]??(key==='access'?'any':key==='sort'?'relevance':'');}
+async function fetchJSON(url){
+  const hit=cache.get(url);if(hit && Date.now()-hit.time<config.cacheMinutes*60000)return hit;
+  const run=async()=>{
+    const cached=cache.get(url);if(cached && Date.now()-cached.time<config.cacheMinutes*60000)return cached;
+    if(Date.now()<blockedUntil)throw Error('Open Library asked us to slow down. Please wait a minute, then try again.');
+    await new Promise(r=>setTimeout(r,Math.max(0,lastRequest+config.requestGapMs-Date.now())));
+    lastRequest=Date.now();const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),config.timeoutMs);
+    try{const response=await fetch(url,{headers:{Accept:'application/json'},credentials:'omit',referrerPolicy:'no-referrer',signal:controller.signal});
+      if(response.status===429){blockedUntil=Date.now()+60000;throw Error('Open Library is rate limiting requests. Wait a minute before trying again.');}
+      if(!response.ok)throw Error(`Open Library returned HTTP ${response.status}. You can continue on the source website.`);
+      if(!(response.headers.get('content-type')||'').includes('json'))throw Error('The source returned a web page instead of catalogue data. Open the source website or try later.');
+      const data=await response.json();const entry={data,time:Date.now(),capturedAt:new Date().toISOString()};cache.set(url,entry);if(cache.size>60)cache.delete(cache.keys().next().value);return entry;
+    }catch(error){if(error.name==='AbortError')throw Error('The catalogue request took too long. Try again later.');if(error instanceof TypeError)throw Error('The catalogue could not be reached. This can be a network or browser access problem. Open the search at Open Library, or import a saved receipt.');throw error;}finally{clearTimeout(timer);}
+  };
+  const pending=requestQueue.then(run,run);requestQueue=pending.catch(()=>{});return pending;
 }
-input.addEventListener('input', update);
-document.querySelector('#sample').addEventListener('click', () => {
-  input.value = '  Halifax\nLangley\nHalifax\n\nVancouver  ';
-  update();
-});
-document.querySelector('#clear').addEventListener('click', () => {
-  input.value = '';
-  update();
-  input.focus();
-});
-if (navigator.clipboard && window.isSecureContext) {
-  copy.hidden = false;
-  copy.disabled = true;
-  copy.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(output.value);
-      status.textContent = 'Result copied.';
-    } catch {
-      output.focus();
-      output.select();
-      status.textContent = 'Copy was unavailable. The result is selected so you can copy it manually.';
-    }
-  });
-}
-// Namespace future preference storage as coolcode:<tool-id>:<key>.
-// Do not persist pasted text or uploads by default.
+function busy(value){$('search').disabled=value;$('previous').disabled=value||!state||state.page<=1;$('next').disabled=value||!state||state.page*state.pageSize>=state.total;}
+async function search(query,page=1,pageSize=config.pageSize){let url;try{url=searchURL(query,page,{...config,pageSize});}catch(e){message('status',e.message,true);return;}busy(true);$('source-search').href=sourceSearch(query,config);message('status','Looking through the Open Library catalogue… Your current results will stay here until the new search succeeds.');
+try{const res=await fetchJSON(url),parsed=normalizeSearch(res.data);state=makeReceipt(parsed.records,query,page,parsed.total,'search',res.capturedAt,pageSize);state.exact=parsed.exact;state.ignoredCount=parsed.ignoredCount;state.origin='Live search';renderResults();}catch(e){message('status',e.message+' Previous results are unchanged.',true);}finally{busy(false);}}
+function renderResults(){if(!state)return;$('results').replaceChildren();$('capture-label').textContent=`${state.origin||'Imported search'} · ${date(state.capturedAt)}`;$('results-title').textContent=state.query?`“${state.query.query}” on the reading table`:'Imported reading table';
+message('status',`${state.records.length} works shown · ${state.exact===false?'about ':''}${state.total.toLocaleString()} matching catalogue records.`);
+$('results-context').textContent=state.query?`Search field: ${state.query.field==='all'?'everything':state.query.field}. First publication: ${state.query.from||'any year'}–${state.query.to||'present'}. Availability is an index label and may have changed.`:'Imported records are shown as saved. Their source metadata and access labels may have changed.';if(state.ignoredCount)$('results-context').textContent+=` ${state.ignoredCount} source hits on this page lacked a supported work ID and were omitted; the source total includes them.`;
+for(const [i,book] of state.records.entries()){const card=el('article',undefined,'book-card');card.append(el('span',`CAT. ${String((state.page-1)*state.pageSize+i+1).padStart(3,'0')} / ${book.key.split('/').pop()}`,'card-number'));card.append(el('h3',book.title),el('p',book.authors.join(' · ')||'Author not recorded','authors'));const meta=el('div',undefined,'book-meta');meta.append(el('span',book.firstYear?`First published ${book.firstYear}`:'First year not recorded'),el('span',`${book.editionCount.toLocaleString()} reported editions`));card.append(meta,el('span',accessLabel(book.access),`access ${book.access}`));const actions=el('div',undefined,'card-actions');actions.append(link('Open record ↗',ORIGIN+book.key),button('Compare editions',()=>openEditions(book)),button(shelf.some(x=>x.key===book.key)?'On your shelf ✓':'+ Your shelf',()=>{try{shelf=addToShelf(shelf,book,config.maxShelfItems);persistShelf();renderShelf();renderResults();message('shelf-status',`Added “${book.title}” to your shelf.`);}catch(e){message('shelf-status',e.message,true);}}));card.append(actions);$('results').append(card);}
+if(!state.records.length)$('results').append(el('p','No records matched. Try a broader term, another search field, or leave the year range blank.'));
+$('page-label').textContent=`Page ${state.page} · ${Math.max(1,Math.ceil(state.total/state.pageSize)).toLocaleString()} pages`;
+if(state.query)$('source-search').href=sourceSearch(state.query,config);busy(false);$('export-results').disabled=!state.records.length;}
+async function openEditions(book,offset=0){const sequence=++editionSequence;$('editions-section').hidden=false;$('editions-title').textContent=book.title;$('editions-section').scrollIntoView({behavior:'smooth',block:'start'});if(editionState?.book.key!==book.key){selected=[];$('comparison').replaceChildren();$('edition-list').replaceChildren();}message('edition-status','Loading edition records…');$('editions-previous').disabled=true;$('editions-next').disabled=true;
+try{const url=editionsURL(book.key,offset,config.editionPageSize);let response=cache.get(url);if(!response || (!response.retained && Date.now()-response.time>config.cacheMinutes*60000))response=await fetchJSON(url);if(sequence!==editionSequence)return;
+if(!Array.isArray(response.data.entries))throw Error('The catalogue did not return edition records.');editionState={book,offset,total:Number(response.data.size)||response.data.entries.length,entries:response.data.entries.map(normalizeEdition).filter(Boolean),capturedAt:response.capturedAt};renderEditions();message('edition-status',`${editionState.entries.length} editions shown of ${editionState.total.toLocaleString()} reported · ${response.retained?'retained capture':'retrieved'} ${date(response.capturedAt)}.`);}catch(e){if(sequence===editionSequence)message('edition-status',e.message+' Open the book record for the source’s edition list.',true);}}
+function renderEditions(){$('edition-list').replaceChildren();for(const edition of editionState.entries){const label=el('label',undefined,'edition-option');const box=document.createElement('input');box.type='checkbox';box.checked=selected.some(e=>e.key===edition.key);box.disabled=selected.length>=2&&!box.checked;box.setAttribute('aria-label',`Compare ${edition.title}, ${edition.date||'date unknown'}, ${edition.key.split('/').pop()}`);box.addEventListener('change',()=>{selected=box.checked?[...selected,edition]:selected.filter(e=>e.key!==edition.key);renderEditions();});const text=el('span');text.append(el('strong',edition.title),el('small',[edition.date||'Date not recorded',edition.publishers.join(' / ')||'Publisher not recorded',edition.key.split('/').pop()].join(' · ')));label.append(box,text);$('edition-list').append(label);}
+$('editions-previous').disabled=editionState.offset===0;$('editions-next').disabled=editionState.offset+config.editionPageSize>=editionState.total;$('editions-page').textContent=`Edition page ${Math.floor(editionState.offset/config.editionPageSize)+1}`;$('comparison').replaceChildren();if(!selected.length){$('comparison').append(el('p','Choose an edition above to start comparing.','small'));return;}for(const edition of selected){const card=el('article');card.append(el('h3',edition.title));const dl=el('dl');const rows=[['Published',edition.date],['Publisher',edition.publishers.join('; ')],['Place',edition.places.join('; ')],['Language',edition.languages.join(', ')],['Pages',edition.pages??edition.pagination],['Format',edition.format],['ISBN',edition.isbn.join(', ')],['Record',edition.key.split('/').pop()]];for(const [key,value]of rows)dl.append(el('dt',key),el('dd',String(value||'Not recorded')));card.append(dl,link('Open this edition ↗',ORIGIN+edition.key),button('Remove from comparison',()=>{selected=selected.filter(e=>e.key!==edition.key);renderEditions();}));$('comparison').append(card);}}
+function persistShelf(){try{if($('remember').checked)localStorage.setItem(shelfKey,JSON.stringify(makeReceipt(shelf,null,1,shelf.length,'shelf')));else localStorage.removeItem(shelfKey);}catch{message('shelf-status','This browser could not save the shelf. Export JSON to keep your books.',true);}}
+function renderShelf(){$('shelf-count').textContent=shelf.length;$('shelf').replaceChildren();for(const book of shelf){const row=el('article',undefined,'shelf-item'),content=el('div');content.append(link(book.title,ORIGIN+book.key),el('p',`${book.authors.join(' · ')||'Author not recorded'} · ${book.firstYear??'Year unknown'}`));row.append(content,button('Remove',()=>{shelf=shelf.filter(x=>x.key!==book.key);persistShelf();renderShelf();renderResults();}));$('shelf').append(row);}for(const id of ['export-shelf','export-csv','clear-shelf'])$(id).disabled=!shelf.length;}
+function download(name,content,type='application/json'){const url=URL.createObjectURL(new Blob([content],{type}));const a=el('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);}
+async function start(){try{const [c,data]=await Promise.all([fetch('./config.json').then(r=>{if(!r.ok)throw Error('Configuration is unavailable.');return r.json();}),fetch('./data/opening.json').then(r=>{if(!r.ok)throw Error('The retained opening search is unavailable.');return r.json();})]);config=validateConfig(c);fill(config.defaultSearch);for(const preset of config.presets)$('presets').append(button(preset.label,()=>{fill({...config.defaultSearch,...preset,access:preset.access||'any'});search(inputs());}));
+const parsed=normalizeSearch(data.search);state=makeReceipt(parsed.records,data.query,1,parsed.total,'search',data.capturedAt,Number(new URL(data.sourceURL).searchParams.get('limit'))||config.pageSize);state.origin='Retained opening search';state.ignoredCount=parsed.ignoredCount;for(const item of data.editions||[])cache.set(editionsURL(item.work,0,Number(new URL(item.sourceURL).searchParams.get('limit'))||20),{data:item.data,time:0,capturedAt:item.capturedAt,retained:true});
+try{const saved=localStorage.getItem(shelfKey);if(saved){shelf=validateReceipt(JSON.parse(saved),config.maxShelfItems).records;$('remember').checked=true;}}catch{message('shelf-status','A previous saved shelf could not be read. You can import an exported JSON copy.',true);}
+renderShelf();renderResults();$('search-form').addEventListener('submit',event=>{event.preventDefault();search(inputs());});$('previous').addEventListener('click',()=>search(state.query,state.page-1,state.pageSize));$('next').addEventListener('click',()=>search(state.query,state.page+1,state.pageSize));$('close-editions').addEventListener('click',()=>{$('editions-section').hidden=true;editionSequence++;});$('editions-previous').addEventListener('click',()=>openEditions(editionState.book,Math.max(0,editionState.offset-config.editionPageSize)));$('editions-next').addEventListener('click',()=>openEditions(editionState.book,editionState.offset+config.editionPageSize));$('remember').addEventListener('change',persistShelf);$('clear-shelf').addEventListener('click',()=>{shelf=[];persistShelf();renderShelf();renderResults();message('shelf-status','Shelf cleared. Previously exported files are unchanged.');});$('export-results').addEventListener('click',()=>download('bookgraveyard-search.json',JSON.stringify(state,null,2)));$('export-shelf').addEventListener('click',()=>download('bookgraveyard-shelf.json',JSON.stringify(makeReceipt(shelf,null,1,shelf.length,'shelf'),null,2)));$('export-csv').addEventListener('click',()=>download('bookgraveyard-shelf.csv',csv(shelf),'text/csv;charset=utf-8'));
+$('import').addEventListener('change',async event=>{const file=event.target.files[0];if(!file)return;try{if(file.size>config.maxImportBytes)throw Error('This file is too large. Choose a smaller Book Graveyard export.');const receipt=validateReceipt(JSON.parse(await file.text()),config.maxShelfItems);if(receipt.kind==='shelf'){let next=shelf;for(const book of receipt.records)next=addToShelf(next,book,config.maxShelfItems);shelf=next;persistShelf();renderShelf();renderResults();message('shelf-status',`Imported ${receipt.records.length} books; duplicates were kept once.`);}else{state={...receipt,origin:'Imported search'};if(receipt.query)fill(receipt.query);renderResults();if(!receipt.query){$('previous').disabled=true;$('next').disabled=true;}}}catch(e){message('status',`Import failed: ${e.message} Your current records are unchanged.`,true);}finally{event.target.value='';}});
+}catch(e){message('status',e.message+' Open Library is available through the source link below.',true);$('search').disabled=true;}}
+start();

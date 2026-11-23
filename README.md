@@ -1,116 +1,59 @@
-# CoolCode browser tool template
+# Book Graveyard
 
-A starting point for independent tools at `coolcode.ca/<repo>/`: a working local-text
-example, responsive UI, Python standard-library build, Node tests, PR checks and Pages
-publication. No npm install is needed.
-
-## Using the example
+A small, public browser catalogue for rediscovering books, comparing editions and following original reading links. Live site: [coolcode.ca/bookgraveyard/](https://coolcode.ca/bookgraveyard/).
 
 <!-- coolcode:guide -->
-The first occurrence of each trimmed line keeps its place. Compare the output with the original text before copying the result.
+Search any title, author, subject or set of words, optionally limiting the work's first-publication years and Open Library's access category. The starting searches are editable suggestions, not a fixed collection. Results are paginated. Open **Compare editions** on a work, then choose two publication records to compare publisher, date, language, pages, format and ISBN. A work groups editions; its first-publication year and reading-access label do not describe every edition.
+
+The opening screen uses a small, dated real Open Library capture. **Search books** retrieves live results directly from Open Library; failures preserve the previous results. Add books to a reading shelf, export JSON/CSV, or import a saved search/shelf JSON locally. The shelf stays in the current tab unless **Remember this shelf on this device** is selected. A readable-copy label is not a worldwide public-domain determination, and borrowing can require an Open Library/Internet Archive account. “Graveyard” is a discovery theme, not a claim that titles are forgotten or out of print.
+
+**Expand or customize:** edit `web/config.json` to change `defaultSearch`, add any number of `presets`, or change page sizes and timeouts. Each query has `query`, `field` (`all`, `title`, `author`, `subject`), `from`, `to`, `access` (`any`, `public`, `borrowable`, `no_ebook`) and `sort` (`relevance`, `old`, `new`). Visitors can type searches beyond these presets. After changing the opening search, run `python3 scripts/refresh_data.py` once; review `web/data/opening.json`, then run the normal checks and commit to `main`. The Pages workflow builds and publishes the change. This tool needs no API key; Open Library asks the owner to register the application/use case using the form linked in its API documentation.
 <!-- /coolcode:guide -->
 
-For a real tool, replace this paragraph with one or two plain-text sentences
-about an example, a limit or how to interpret the results. Keep the source,
-coverage, refresh behaviour and a worked example in this README as appropriate.
-When updating a tool, revise any details its behaviour has changed and keep the
-homepage's shorter data-source sentence in `tool.json` accurate.
-The hub imports the marked note into the catalogue README.
+## Sources and what the labels mean
 
-## One-time template setup
+- [Open Library Search API](https://openlibrary.org/dev/docs/api/search): requested fields are explicit and each page is limited to 12 works by default. First-publication dates come from the catalogue. Unknown dates remain unknown. Search hits with missing or legacy non-work IDs are omitted and counted visibly; the provider's total still includes them, and the original search link exposes the complete source page.
+- [Works and Editions API](https://openlibrary.org/dev/docs/api/books): the user opens one work at a time, in pages of 20 editions. **Compare editions** compares catalogue fields, not book text.
+- [Search access labels](https://openlibrary.org/search/howto): `public` becomes **Readable copy listed**; `borrowable` becomes **Borrowing listed**; `no_ebook` becomes **Catalogue record**; `printdisabled` becomes **Restricted access**. These are work-level indexed observations, not a promise that a particular edition can be downloaded today.
+- [Catalogue licensing](https://openlibrary.org/developers/licensing) and [using the data](https://openlibrary.org/help/faq/using): catalogue metadata is openly reusable; existing rights may apply to contributions and book contents. This app republishes bibliographic metadata, not book text or scans. It does not infer rights from age. Follow the original record to confirm access and rights in your jurisdiction.
 
-Enable **Settings → General → Template repository** here. This repository does not
-need Pages enabled: its workflow builds/tests but intentionally skips deployment.
-New copies also skip deployment until `scripts/init.py` sets the tool ID to match
-their repository name. This lets you create the repo before configuring Pages.
+No Gutendex demonstration service, scraping, proxies, automatic book downloads or book-cover requests are used. Public-domain and borrowable reading links stay on the original Open Library record so current availability can be checked there.
 
-## Start a new tool
+## API registration and traffic
 
-1. Select **Use this template → Create a new repository**, choose owner `jsdyer`,
-   a unique lowercase name such as `my-tool`, and public visibility.
-2. Clone the new repository. Use Python 3.12+ and Node 24+.
-3. Set the identity, using a slug that matches the repository name:
+Public metadata reads need **no key or login**. The owner should complete **Registering Your Application** on [Open Library's current API page](https://openlibrary.org/developers/api). The provider asks for this use-case registration; it is separate from a visitor account needed for some borrowing. No form has been submitted on the owner's behalf.
 
-```sh
-python3 scripts/init.py my-tool --title "My Tool" --description "Describe what this tool does."
+Suggested application description for the form:
+
+> Book Graveyard is a free, open-source personal book-discovery tool at https://coolcode.ca/bookgraveyard/ (source: https://github.com/jsdyer/bookgraveyard). Visitors request title, author or subject searches and compare two edition records. We link back to Open Library for reading and current availability. The app requests only a bounded page at a time, caches responses within the tab for 15 minutes, and spaces API calls at least 1.2 seconds apart. There is no autocomplete crawl, scheduled bulk collection, redistribution of book files or commercial data resale. A manually refreshed opening example uses one search request and at most one edition-page request. Expected launch traffic is small but not yet measured. The browser sends ordinary browser identification; our manual collector identifies BookGraveyard and its public project URL. Please advise if you prefer another identification method for direct browser requests.
+
+Use your preferred contact email in their form; it is not a GitHub secret and is not required in this static page. If the provider requests an identified collector, you may deliberately set `refreshUserAgent` to `BookGraveyard/1.0 (your-contact-address)`; doing so sends that contact value to Open Library. The supplied configuration contains the public app URL only.
+
+[Documented limits](https://openlibrary.org/developers/api), reviewed November 23, 2026: unidentified requests default to **1 per second**, identified requests with application name/contact **3 per second**. This app deliberately stays below the lower limit. Browsers do not reliably permit an application-controlled User-Agent. Search and edition requests are serialized and spaced at least 1.2 seconds apart; repeated responses are cached in tab memory, and HTTP 429 pauses requests for a minute. This controls a tab, not aggregate traffic from every visitor or multiple tabs. If traffic grows beyond personal discovery use, coordinate with Open Library and use their data dumps for a locally hosted index instead of harvesting the API.
+
+## Expand or customize
+
+`web/config.json` is the source of defaults. Example additional starting point:
+
+```json
+{"label":"Early radio","query":"radio","field":"subject","from":"1880","to":"1940","access":"any","sort":"old"}
 ```
 
-Review the category, tags and icon in `tool.json`. `access: "browser"` tells the main
-catalogue that the tool works immediately without installation. `--owner` supports a different
-GitHub owner, but only projects owned by `jsdyer` inherit the CoolCode domain.
-
-4. Replace the example in `web/` and its tests. Update the privacy explanation,
-   source attribution and README to describe the real tool.
-5. Test and preview:
+Add it to `presets`; there is no fixed-count assumption. Changing presets alone needs only a build and publication. `defaultSearch` controls the real opening example; refresh that capture when changing it. `pageSize` and `editionPageSize` accept 1–50; keep modest defaults. `requestGapMs` must stay at least 1100. Adjust `timeoutMs`, `cacheMinutes`, `maxShelfItems` and `maxImportBytes` within the documented code validators. `source` is intentionally restricted to the supported Open Library API rather than becoming an arbitrary URL fetcher.
 
 ```sh
+python3 scripts/refresh_data.py  # Two bounded requests at most; no key
 node --test tests/*.test.mjs
 python3 -m unittest discover -s tests -v
 python3 scripts/build.py
-python3 -m http.server 8000 --directory dist
 ```
 
-Open `http://localhost:8000/`. The example trims lines, skips blanks and removes exact
-duplicates, preserving first-seen order and capitalization. It processes the text in tab memory. Update that explanation if your app behaves differently.
+The collector prints the requested URLs, checks JSON and required arrays, and replaces the retained capture only after both responses validate. A failure leaves the prior capture untouched. Every capture carries UTC retrieval time and source URL; retrieved time is not a book publication date. Refresh is manual, with no scheduled polling. Git retains earlier committed opening captures; exported visitor receipts are independent copies.
 
-CI also tests the browser flow and mobile layout at a project subpath. Replace the
-sample assertions in `tests/browser_smoke.py` when implementing your own UI. To run
-that check locally (optional for ordinary preview):
+Commit reviewed source/config/data changes to `main`; `.github/workflows/pages.yml` checks the app, builds it offline, runs its browser smoke check and deploys the `dist/` directory to GitHub Pages. Do not commit `dist/` or add a CNAME. The CoolCode routing list is managed separately.
 
-```sh
-python3 -m venv .venv
-. .venv/bin/activate
-python3 -m pip install -r tests/browser-requirements.txt
-python3 -m playwright install --with-deps chromium
-python3 tests/browser_smoke.py
-```
+## Privacy and testing
 
-Playwright is a test-only dependency; the app and its static build do not use it.
+Searching sends the query, selected field, first-year range, access filter and sort to Open Library. An edition lookup sends the selected work ID. No search is sent on initial page load. Import, reading shelf and comparison run in the browser; persistent storage is opt-in under `coolcode:bookgraveyard:shelf`. Removing the checkbox deletes that stored shelf. JSON imports validate their shape and Open Library IDs; rendered records use `textContent`, and links are constructed from validated IDs. CSV values are quoted and formula-like values are escaped. CoolCode's standard page metrics script remains separate from the app's input handling.
 
-## Publish and register
-
-When the actual tool is ready, in the **new tool repository** set **Settings → Pages → Build and deployment →
-Source → GitHub Actions**. Push to `main`, or manually run **Browser tool · Check and
-publish** after enabling Pages. If the initial deployment ran before Pages was enabled,
-enable it and rerun. PRs only check/build and provide a downloadable preview artifact.
-
-Keep `{{VISIT_COUNTER}}` in the page head and `{{ISSUE_LINK}}` in the footer when replacing the starter UI. The build enables these for initialized CoolCode repositories. The shared counter records aggregate opens on coolcode.ca by public tool ID. Toolbox inputs and URL parameters are excluded. The issue link opens a reporting form with the tool already selected.
-
-Keep app-owned asset paths and module imports relative. Check `https://coolcode.ca/my-tool/`.
-Do not add a CNAME or set `coolcode.ca` as this project's custom domain; the account
-site supplies it. Only successful `main` builds deploy.
-
-After verifying the app, copy the reviewed object from `tool.json` into `data/tools.json`
-in [the main site](https://github.com/jsdyer/jsdyer.github.io). Each tool still builds
-independently. Update the hub record when listing metadata changes; the hub is the
-authority for discovery. Ordinary app updates touch only this repository.
-
-The main site separates **Use in your browser** from **Install yourself**. An app
-that asks for a file is still a browser tool. Standalone Linux packages should start
-in their own repositories with their own build/release workflow, rather than copying
-this browser-only scaffold. Their hub record uses `access: "install"`, links to an
-installation guide, and includes `requirements`.
-
-## Files
-
-| Path | Purpose |
-| --- | --- |
-| `tool.json` | Page metadata and a ready-to-copy catalogue record |
-| `web/` | HTML, responsive CSS, DOM interactions and separate model logic |
-| `scripts/build.py` | Escape metadata and build `web/` into `dist/` |
-| `scripts/init.py` | Set a new project's identity |
-| `tests/` | Application and builder tests |
-| `.github/workflows/pages.yml` | Check PRs and publish successful main builds |
-| `AGENTS.md` | Instructions for future coding work |
-
-Namespace optional storage as `coolcode:<tool-id>:<key>`; CoolCode paths share a
-browser origin. Don't save pasted text/uploads by default. Document external APIs
-and send only the information needed for the selected action. Never embed secrets.
-
-Scheduled refresh is opt-in. Validate source data before deploying, display its date,
-and preserve the last good deployment on failure. Public-repository schedules can
-stop after 60 days without repository activity.
-
-Templates don't propagate future edits automatically. Adopt fixes explicitly and
-consider a versioned reusable workflow once several tools confirm the shared process.
-Choose and add the intended software license before distributing a new project.
+The normal build needs Python's standard library and Node for tests, without runtime package dependencies. `tests/browser_smoke.py` is run by CI using the pinned browser-test requirements; it covers a project subpath, arbitrary live-query request construction (with deterministic responses), errors preserving results, comparing editions, shelf export/import and mobile overflow. Stubbed browser tests do not prove future provider availability; check a real arbitrary query after publishing.

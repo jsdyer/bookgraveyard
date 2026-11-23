@@ -1,0 +1,53 @@
+{
+  "defaultSearch": {
+    "query": "telegraph",
+    "field": "subject",
+    "from": "1800",
+    "to": "1930",
+    "access": "any",
+    "sort": "old"
+  },
+  "presets": [
+    {
+      "label": "Early communications",
+      "query": "telegraph",
+      "field": "subject",
+      "from": "1800",
+      "to": "1930",
+      "sort": "old"
+    },
+    {
+      "label": "Computing before 1980",
+      "query": "computers",
+      "field": "subject",
+      "from": "1900",
+      "to": "1979",
+      "sort": "old"
+    },
+    {
+      "label": "Ghost stories",
+      "query": "ghost stories",
+      "field": "subject",
+      "from": "1800",
+      "to": "1925",
+      "sort": "old"
+    },
+    {
+      "label": "Canadian journeys",
+      "query": "Canada travel",
+      "field": "all",
+      "from": "1700",
+      "to": "1930",
+      "sort": "old"
+    }
+  ],
+  "pageSize": 12,
+  "editionPageSize": 20,
+  "requestGapMs": 1200,
+  "timeoutMs": 25000,
+  "cacheMinutes": 15,
+  "maxShelfItems": 200,
+  "maxImportBytes": 2000000,
+  "source": "https://openlibrary.org",
+  "refreshUserAgent": "BookGraveyard/1.0 (+https://coolcode.ca/bookgraveyard/)"
+}

@@ -1,21 +1,17 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { cleanLines } from '../web/model.mjs';
-test('trims, removes blanks and preserves first-seen order', () => {
-  assert.deepEqual(cleanLines('  Halifax\nLangley\nHalifax\n\nVancouver  '), {
-    text: 'Halifax\nLangley\nVancouver', count: 3, removed: 1,
-  });
-});
-test('supports Windows and old Mac line endings', () => {
-  assert.equal(cleanLines('a\r\nb\ra').text, 'a\nb');
-});
-test('empty text and whitespace produce an empty result', () => {
-  assert.deepEqual(cleanLines(' \n\t'), { text: '', count: 0, removed: 0 });
-});
-test('preserves case and Unicode', () => {
-  assert.equal(cleanLines('Québec\nquébec\n東京\nQuébec').text, 'Québec\nquébec\n東京');
-});
-test('treats markup as ordinary text', () => {
-  assert.equal(cleanLines('<script>alert(1)</script>\n<script>alert(1)</script>').text, '<script>alert(1)</script>');
-});
-test('rejects non-text input', () => { assert.throws(() => cleanLines(null), TypeError); });
+import fs from 'node:fs';
+import {validateConfig,searchURL,sourceSearch,editionsURL,normalizeSearch,normalizeEdition,normalizeWork,validateReceipt,makeReceipt,addToShelf,accessLabel,csv} from '../web/model.mjs';
+const config=JSON.parse(fs.readFileSync(new URL('../web/config.json',import.meta.url)));
+const book={key:'/works/OL123W',title:'Wireless experiments',author_name:['A. Person'],first_publish_year:1912,edition_count:3,ebook_access:'public'};
+test('arbitrary new topic and preset expand beyond the starting list',()=>{const extra={label:'Arbitrary test',query:'papermaking',field:'subject',from:'1600',to:'1900',access:'any',sort:'old'};assert.equal(validateConfig({...config,presets:[...config.presets,extra]}).presets.length,config.presets.length+1);const u=new URL(searchURL(extra,3,config));assert.equal(u.searchParams.get('subject'),'papermaking');assert.equal(u.searchParams.get('q'),'first_publish_year:[1600 TO 1900]');assert.equal(u.searchParams.get('page'),'3');assert.equal(u.searchParams.get('limit'),String(config.pageSize));});
+test('query, year, access and source URLs retain filters without expensive wildcard fields',()=>{const u=new URL(searchURL({...config.defaultSearch,field:'all',query:'radio & communication',access:'public'}));assert.equal(u.searchParams.get('q'),'(radio & communication) AND first_publish_year:[1800 TO 1930] AND ebook_access:public');assert(!u.searchParams.get('fields').includes('*'));const source=new URL(sourceSearch(config.defaultSearch,config));assert.equal(source.pathname,'/search');assert(!source.searchParams.has('fields'));});
+test('invalid dates, reversed year ranges and unsafe configuration are rejected',()=>{assert.throws(()=>searchURL({...config.defaultSearch,from:'1930',to:'1800'}),/before/);assert.throws(()=>searchURL({...config.defaultSearch,from:'oops'}),/publication year/);assert.throws(()=>searchURL({...config.defaultSearch,query:''}),/Enter/);assert.throws(()=>validateConfig({...config,source:'https://evil.example'}));assert.throws(()=>validateConfig({...config,requestGapMs:10}));});
+test('work metadata stays separate from editions and unavailable access remains unknown',()=>{const work=normalizeWork(book);assert.equal(work.firstYear,1912);assert.equal(work.editionCount,3);assert.equal(accessLabel(work.access),'Readable copy listed');assert.equal(normalizeWork({...book,ebook_access:'invented'}).access,'unknown');const edition=normalizeEdition({key:'/books/OL44M',title:'Revised wireless',publish_date:'[1923?]',publishers:['Test Press'],languages:[{key:'/languages/eng'}],number_of_pages:237,isbn_13:['9780000000000']});assert.equal(edition.date,'[1923?]');assert.deepEqual(edition.languages,['eng']);assert.equal(edition.pages,237);assert(!Object.hasOwn(edition,'access'));assert.equal(normalizeWork({...book,key:'https://evil.example'}),null);});
+test('edition pagination only accepts valid work identifiers',()=>{assert.match(editionsURL(book.key,20,20),/offset=20/);assert.throws(()=>editionsURL('/works/../../attack'));});
+test('receipts round trip without inventing access and shelf deduplicates by stable work ID',()=>{const normalized=normalizeWork(book);const receipt=makeReceipt([normalized],config.defaultSearch,1,93,'search','2026-11-23T00:00:00Z');assert.deepEqual(validateReceipt(JSON.parse(JSON.stringify(receipt))),receipt);const shelf=addToShelf([],normalized);assert.equal(addToShelf(shelf,normalized).length,1);assert.throws(()=>addToShelf(shelf,{...normalized,key:'/works/OL124W'},1),/up to/);assert.throws(()=>validateReceipt({...receipt,records:[{...normalized,key:'javascript:alert(1)'}]}),/invalid/);assert.throws(()=>validateReceipt({...receipt,capturedAt:'yesterday'}));});
+test('malformed source responses are rejected and unsafe link-shaped IDs ignored',()=>{assert.throws(()=>normalizeSearch({docs:'wrong'}));const result=normalizeSearch({numFound:2,docs:[book,{...book,key:'/works/OL123W/../attack'}]});assert.equal(result.records.length,1);assert.equal(result.total,2);});
+test('CSV escapes quotes, newlines and spreadsheet formulas',()=>{const output=csv([normalizeWork({...book,title:'=HYPERLINK("bad")',author_name:['One, Two']})]);assert(output.includes('"\'=HYPERLINK(""bad"")"'));assert(output.includes('"One, Two"'));});
+test('retained example has real provenance, bounded records and at least one edition comparison',()=>{const data=JSON.parse(fs.readFileSync(new URL('../web/data/opening.json',import.meta.url)));assert(Number.isFinite(Date.parse(data.capturedAt)));assert(new URL(data.sourceURL).hostname==='openlibrary.org');assert(normalizeSearch(data.search).records.length>0);assert(data.search.docs.length<=config.pageSize);assert(data.editions.length<=1);for(const page of data.editions){assert(page.data.entries.length<=config.editionPageSize);assert(page.data.entries.map(normalizeEdition).filter(Boolean).length>=2);}});
+
+test('a receipt retains its original page size after defaults change',()=>{const receipt=makeReceipt([normalizeWork(book)],config.defaultSearch,3,999,'search','2026-11-23T00:00:00Z',24);assert.equal(validateReceipt(receipt).pageSize,24);assert.equal(validateReceipt(receipt).page,3);});

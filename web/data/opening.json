@@ -1,0 +1,732 @@
+{
+  "schema": "bookgraveyard-opening/v1",
+  "capturedAt": "2026-11-23T06:12:48Z",
+  "query": {
+    "query": "telegraph",
+    "field": "subject",
+    "from": "1800",
+    "to": "1930",
+    "access": "any",
+    "sort": "old"
+  },
+  "sourceURL": "https://openlibrary.org/search.json?fields=key%2Ctitle%2Cauthor_name%2Cfirst_publish_year%2Cedition_count%2Cebook_access%2Clanguage&limit=12&page=1&subject=telegraph&q=first_publish_year%3A%5B1800+TO+1930%5D&sort=old",
+  "search": {
+    "numFound": 1861,
+    "start": 0,
+    "numFoundExact": true,
+    "num_found": 1861,
+    "documentation_url": "https://openlibrary.org/dev/docs/api/search",
+    "q": "first_publish_year:[1800 TO 1930]",
+    "offset": null,
+    "docs": [
+      {
+        "author_name": [
+          "YA Pamphlet Collection (Library of Congress)"
+        ],
+        "ebook_access": "no_ebook",
+        "edition_count": 1,
+        "first_publish_year": 1800,
+        "key": "/works/OL23450854W",
+        "language": [
+          "eng"
+        ],
+        "title": "British telegraph monopoly"
+      },
+      {
+        "author_name": [
+          "Jacob Crowninshield"
+        ],
+        "ebook_access": "no_ebook",
+        "edition_count": 9,
+        "first_publish_year": 1805,
+        "key": "/works/OL11371581W",
+        "language": [
+          "eng"
+        ],
+        "title": "Mr. Crowninshield's motion"
+      },
+      {
+        "author_name": [
+          "Joseph von Obernberg"
+        ],
+        "ebook_access": "no_ebook",
+        "edition_count": 1,
+        "first_publish_year": 1808,
+        "key": "/works/OL44026641W",
+        "language": [
+          "ger"
+        ],
+        "title": "Kleine Schriften fur Polizey und Gemeinwohl"
+      },
+      {
+        "ebook_access": "no_ebook",
+        "edition_count": 1,
+        "first_publish_year": 1812,
+        "key": "/works/OL13482257M",
+        "title": "Telegraphic dictionary"
+      },
+      {
+        "author_name": [
+          "Christopher Colles"
+        ],
+        "ebook_access": "no_ebook",
+        "edition_count": 4,
+        "first_publish_year": 1813,
+        "key": "/works/OL33524586W",
+        "language": [
+          "eng"
+        ],
+        "title": "Description of the numerical telegraph"
+      },
+      {
+        "author_name": [
+          "Great Britain. Admiralty"
+        ],
+        "ebook_access": "no_ebook",
+        "edition_count": 1,
+        "first_publish_year": 1816,
+        "key": "/works/OL44725045W",
+        "language": [
+          "eng"
+        ],
+        "title": "Telegraphic signals for the use of His Majesty's fleet"
+      },
+      {
+        "ebook_access": "no_ebook",
+        "edition_count": 1,
+        "first_publish_year": 1819,
+        "key": "/works/OL15126342M",
+        "language": [
+          "eng"
+        ],
+        "title": "Dear Sir, As one interested in the advancement of sound and hearty federalism ..."
+      },
+      {
+        "ebook_access": "no_ebook",
+        "edition_count": 1,
+        "first_publish_year": 1819,
+        "key": "/works/OL43865727W",
+        "language": [
+          "eng"
+        ],
+        "title": "Dear Sir, As one interested in the advancement of sound and hearty federalism ..."
+      },
+      {
+        "author_name": [
+          "Ronalds, Francis Sir"
+        ],
+        "ebook_access": "no_ebook",
+        "edition_count": 1,
+        "first_publish_year": 1823,
+        "key": "/works/OL7714818W",
+        "language": [
+          "eng"
+        ],
+        "title": "Descriptions of an electrical telegraph and of some other electrical apparatus"
+      },
+      {
+        "author_name": [
+          "Ronalds, Francis Sir"
+        ],
+        "ebook_access": "no_ebook",
+        "edition_count": 1,
+        "first_publish_year": 1823,
+        "key": "/works/OL43474898W",
+        "language": [
+          "eng"
+        ],
+        "title": "Descriptions of an electrical telegraph"
+      },
+      {
+        "author_name": [
+          "Chappe M., l'aîné"
+        ],
+        "ebook_access": "no_ebook",
+        "edition_count": 1,
+        "first_publish_year": 1824,
+        "key": "/works/OL5947245W",
+        "language": [
+          "fre"
+        ],
+        "title": "Histoire de la télégraphie"
+      },
+      {
+        "author_name": [
+          "Chappe M."
+        ],
+        "ebook_access": "no_ebook",
+        "edition_count": 2,
+        "first_publish_year": 1824,
+        "key": "/works/OL42381597W",
+        "language": [
+          "fre"
+        ],
+        "title": "Histoire de la télégraphie"
+      }
+    ]
+  },
+  "editions": [
+    {
+      "work": "/works/OL11371581W",
+      "capturedAt": "2026-11-23T06:12:52Z",
+      "sourceURL": "https://openlibrary.org/works/OL11371581W/editions.json?limit=20&offset=0",
+      "data": {
+        "links": {
+          "self": "/works/OL11371581W/editions.json?limit=20&offset=0",
+          "work": "/works/OL11371581W"
+        },
+        "size": 9,
+        "entries": [
+          {
+            "type": {
+              "key": "/type/edition"
+            },
+            "publish_date": "1805",
+            "publish_country": "xx",
+            "languages": [
+              {
+                "key": "/languages/eng"
+              }
+            ],
+            "title": "Mr. Crowninshield's motion",
+            "subtitle": "23d January, 1805. Read, and ordered to be referred to a committee of the whole House, on Monday next",
+            "authors": [
+              {
+                "key": "/authors/OL4775697A"
+              },
+              {
+                "key": "/authors/OL16479448A"
+              },
+              {
+                "key": "/authors/OL16479898A"
+              }
+            ],
+            "notes": {
+              "type": "/type/text",
+              "value": "Resolution that the Committee of commerce and manufactures inquire into the protection of American commerce and seamen."
+            },
+            "subjects": [
+              "Commerce",
+              "Impressment"
+            ],
+            "subject_places": [
+              "United States"
+            ],
+            "publish_places": [
+              "n.p"
+            ],
+            "pagination": "2 lea.",
+            "source_records": [
+              "marc:UniversityOfMichiganMarcCatalogRecords/umich_bib.mrc:530033178:991"
+            ],
+            "full_title": "Mr. Crowninshield's motion 23d January, 1805. Read, and ordered to be referred to a committee of the whole House, on Monday next",
+            "works": [
+              {
+                "key": "/works/OL11371581W"
+              }
+            ],
+            "key": "/books/OL62181548M",
+            "latest_revision": 1,
+            "revision": 1,
+            "created": {
+              "type": "/type/datetime",
+              "value": "2026-06-21T11:52:52.859918"
+            },
+            "last_modified": {
+              "type": "/type/datetime",
+              "value": "2026-06-21T11:52:52.859918"
+            }
+          },
+          {
+            "type": {
+              "key": "/type/edition"
+            },
+            "publish_date": "1805",
+            "publish_country": "dcu",
+            "languages": [
+              {
+                "key": "/languages/eng"
+              }
+            ],
+            "title": "Mr. Crowninshield's motion",
+            "subtitle": "23d January, 1805, read and ordered to be referred to a committee of the whole House on Monday next",
+            "authors": [
+              {
+                "key": "/authors/OL4775697A"
+              }
+            ],
+            "oclc_numbers": [
+              "40008336"
+            ],
+            "series": [
+              "Early American imprints -- no. 9582"
+            ],
+            "notes": {
+              "type": "/type/text",
+              "value": "Resolution that the Committee of Commerce and Manufactures inquire into the Protection of American commerce and seamen.\n\nShaw & Shoemaker 9582\n\nMicroform version available in the Readex Early American Imprints series."
+            },
+            "subjects": [
+              "Sailors",
+              "Commerce"
+            ],
+            "subject_places": [
+              "United States"
+            ],
+            "publishers": [
+              "[s.n.]"
+            ],
+            "publish_places": [
+              "Washington?"
+            ],
+            "pagination": "[4] p.",
+            "source_records": [
+              "marc:harvard_bibliographic_metadata/20220215_031.bib.mrc:172423330:1631"
+            ],
+            "full_title": "Mr. Crowninshield's motion 23d January, 1805, read and ordered to be referred to a committee of the whole House on Monday next",
+            "works": [
+              {
+                "key": "/works/OL11371581W"
+              }
+            ],
+            "key": "/books/OL61336567M",
+            "latest_revision": 1,
+            "revision": 1,
+            "created": {
+              "type": "/type/datetime",
+              "value": "2026-02-18T05:22:00.342473"
+            },
+            "last_modified": {
+              "type": "/type/datetime",
+              "value": "2026-02-18T05:22:00.342473"
+            }
+          },
+          {
+            "type": {
+              "key": "/type/edition"
+            },
+            "publish_date": "1807",
+            "publish_country": "dcu",
+            "languages": [
+              {
+                "key": "/languages/eng"
+              }
+            ],
+            "title": "Mr. Crowninshield's motion",
+            "subtitle": "December 22, 1807. : Referred to a committee of the whole House, to-morrow",
+            "authors": [
+              {
+                "key": "/authors/OL4775697A"
+              },
+              {
+                "key": "/authors/OL7134487A"
+              }
+            ],
+            "oclc_numbers": [
+              "15454671"
+            ],
+            "series": [
+              "Early American imprints -- no. 14010"
+            ],
+            "notes": {
+              "type": "/type/text",
+              "value": "Resolution authorizing the president \"to establish such telegraphs along the coasts, and in other situations in the United States, as he may deem proper.\"\n\nShaw & Shoemaker 14010\n\nMicroform version available in the Readex Early American Imprints series."
+            },
+            "subjects": [
+              "Telegraph",
+              "Wireless Telegraph"
+            ],
+            "subject_places": [
+              "United States"
+            ],
+            "publishers": [
+              "A. & G. Way, printers."
+            ],
+            "publish_places": [
+              "City of Washington [D.C.]"
+            ],
+            "pagination": "[2] leaves",
+            "source_records": [
+              "marc:harvard_bibliographic_metadata/20220215_005.bib.mrc:293910251:1747"
+            ],
+            "full_title": "Mr. Crowninshield's motion December 22, 1807. : Referred to a committee of the whole House, to-morrow",
+            "works": [
+              {
+                "key": "/works/OL11371581W"
+              }
+            ],
+            "key": "/books/OL59381309M",
+            "latest_revision": 1,
+            "revision": 1,
+            "created": {
+              "type": "/type/datetime",
+              "value": "2025-06-23T22:36:49.745244"
+            },
+            "last_modified": {
+              "type": "/type/datetime",
+              "value": "2025-06-23T22:36:49.745244"
+            }
+          },
+          {
+            "type": {
+              "key": "/type/edition"
+            },
+            "publish_date": "1806",
+            "publish_country": "dcu",
+            "languages": [
+              {
+                "key": "/languages/eng"
+              }
+            ],
+            "title": "Mr. Crowninshield's motion",
+            "subtitle": "December 19, 1806. : Read, and committed to a committee of the whole House, on Tuesday next",
+            "authors": [
+              {
+                "key": "/authors/OL4775697A"
+              },
+              {
+                "key": "/authors/OL7134487A"
+              }
+            ],
+            "oclc_numbers": [
+              "15444653"
+            ],
+            "series": [
+              "Early American imprints -- no. 11661"
+            ],
+            "notes": {
+              "type": "/type/text",
+              "value": "Resolution \"to reduce the duties on foreign refined sugar and sugar candy, imported into the United States\" and to remove \"all the disabilities at present imposed on the importation and exportation of refined sugar.\"\n\nShaw & Shoemaker 11661\n\nMicroform version available in the Readex Early American Imprints series."
+            },
+            "subjects": [
+              "Sugar",
+              "Taxation",
+              "Sugar trade",
+              "Tariff",
+              "Customs administration",
+              "Politics and government"
+            ],
+            "subject_times": [
+              "1801-1809"
+            ],
+            "subject_places": [
+              "United States"
+            ],
+            "publishers": [
+              "A. & G. Way, printers."
+            ],
+            "publish_places": [
+              "City of Washington [D.C.]"
+            ],
+            "pagination": "[2] leaves",
+            "source_records": [
+              "marc:harvard_bibliographic_metadata/20220215_004.bib.mrc:189715718:2171"
+            ],
+            "full_title": "Mr. Crowninshield's motion December 19, 1806. : Read, and committed to a committee of the whole House, on Tuesday next",
+            "works": [
+              {
+                "key": "/works/OL11371581W"
+              }
+            ],
+            "key": "/books/OL59318781M",
+            "latest_revision": 1,
+            "revision": 1,
+            "created": {
+              "type": "/type/datetime",
+              "value": "2025-06-16T03:18:45.643270"
+            },
+            "last_modified": {
+              "type": "/type/datetime",
+              "value": "2025-06-16T03:18:45.643270"
+            }
+          },
+          {
+            "notes": {
+              "type": "/type/text",
+              "value": "\"December 22, 1807, referred to a committee of the whole House to-morrow.\"\n\nShaw & Shoemaker, 14010.\n\nMicrofiche. [New Canaan, CT: Readex Microprint, 1987-1992] 11 x 15 cm. (Early American imprints.  Second series ; no. 14010)."
+            },
+            "title": "Mr. Crowninshield's motion",
+            "authors": [
+              {
+                "key": "/authors/OL4775697A"
+              }
+            ],
+            "publish_date": "1979",
+            "publishers": [
+              "A. & G. Way, printers"
+            ],
+            "series": [
+              "Early American imprints -- no. 14010."
+            ],
+            "physical_format": "Microform",
+            "publish_places": [
+              "City of Washington"
+            ],
+            "contributions": [
+              "United States. Congress. Senate."
+            ],
+            "pagination": "[2] p.",
+            "languages": [
+              {
+                "key": "/languages/eng"
+              }
+            ],
+            "subjects": [
+              "Telegraph lines -- United States."
+            ],
+            "publish_country": "dcu",
+            "type": {
+              "key": "/type/edition"
+            },
+            "source_records": [
+              "marc:marc_oregon_summit_records/catalog_files/osu_bibs.mrc:1251806834:1166"
+            ],
+            "key": "/books/OL17705890M",
+            "works": [
+              {
+                "key": "/works/OL11371581W"
+              }
+            ],
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+              "type": "/type/datetime",
+              "value": "2008-09-30T15:27:00.142772"
+            },
+            "last_modified": {
+              "type": "/type/datetime",
+              "value": "2026-01-20T15:08:45.917084"
+            }
+          },
+          {
+            "notes": {
+              "type": "/type/text",
+              "value": "\"December 19, 1806 read and committed to a committee of the whole House ...\"\n\nShaw & Shoemaker, 11661\n\nMicrofiche. New Canaan, CT : Readex. microfiches. (Early American imprints.  Second series ; no. 11661)"
+            },
+            "title": "Mr. Crowninshield's motion",
+            "authors": [
+              {
+                "key": "/authors/OL4775697A"
+              }
+            ],
+            "publish_date": "1806",
+            "publishers": [
+              "A. & G. Way, printers"
+            ],
+            "series": [
+              "Early American imprints -- no. 11661"
+            ],
+            "physical_format": "Microform",
+            "publish_places": [
+              "City of Washington"
+            ],
+            "contributions": [
+              "United States. Congress. House"
+            ],
+            "pagination": "[3] p",
+            "languages": [
+              {
+                "key": "/languages/eng"
+              }
+            ],
+            "subjects": [
+              "Sugar -- Taxation -- United States",
+              "Tariff -- United States"
+            ],
+            "publish_country": "xx ",
+            "type": {
+              "key": "/type/edition"
+            },
+            "source_records": [
+              "marc:marc_miami_univ_ohio/allbibs0112.out:11416512:1182"
+            ],
+            "key": "/books/OL15071580M",
+            "works": [
+              {
+                "key": "/works/OL11371581W"
+              }
+            ],
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+              "type": "/type/datetime",
+              "value": "2008-09-17T20:08:25.702409"
+            },
+            "last_modified": {
+              "type": "/type/datetime",
+              "value": "2026-04-03T19:31:32.719469"
+            }
+          },
+          {
+            "notes": {
+              "type": "/type/text",
+              "value": "\"December 19, 1806 read and committed to a committee of the whole House ...\"\n\nShaw & Shoemaker, 11661.\n\nMicrofiche. [New Canaan, CT] : Readex Microprint, [1987-1992] microfiches ; 11 x 15 cm. (Early American imprints.  Second series ; no. 11661)."
+            },
+            "title": "Mr. Crowninshield's motion",
+            "authors": [
+              {
+                "key": "/authors/OL4775697A"
+              }
+            ],
+            "publish_date": "1806",
+            "publishers": [
+              "A. & G. Way, printers"
+            ],
+            "series": [
+              "Early American imprints -- no. 11661."
+            ],
+            "physical_format": "Microform",
+            "publish_places": [
+              "City of Washington"
+            ],
+            "contributions": [
+              "United States. Congress. House."
+            ],
+            "pagination": "[3] p.",
+            "languages": [
+              {
+                "key": "/languages/eng"
+              }
+            ],
+            "subjects": [
+              "Sugar -- Taxation -- United States.",
+              "Tariff -- United States."
+            ],
+            "publish_country": "dcu",
+            "type": {
+              "key": "/type/edition"
+            },
+            "source_records": [
+              "marc:marc_oregon_summit_records/catalog_files/osu_bibs.mrc:1269300866:1213"
+            ],
+            "key": "/books/OL15952174M",
+            "works": [
+              {
+                "key": "/works/OL11371581W"
+              }
+            ],
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+              "type": "/type/datetime",
+              "value": "2008-09-21T19:09:47.956680"
+            },
+            "last_modified": {
+              "type": "/type/datetime",
+              "value": "2026-03-10T15:04:14.533321"
+            }
+          },
+          {
+            "notes": {
+              "type": "/type/text",
+              "value": "Resolution that the Committee of Commerce and Manufactures inquire into the Protection of American commerce and seamen.\n\nShaw & Shoemaker, 9582.\n\nMicrofiche. [New Canaan, CT] : Readex Microprint, [1987-1992] microfiches ; 11 x 15 cm. (Early American imprints.  Second series ; no. 9582)."
+            },
+            "title": "Mr. Crowninshield's motion",
+            "subtitle": "23d January, 1805, read and ordered to be referred to a committee of the whole House on Monday next.",
+            "publish_date": "1805",
+            "publishers": [
+              "s.n."
+            ],
+            "pagination": "[4] p.",
+            "languages": [
+              {
+                "key": "/languages/eng"
+              }
+            ],
+            "series": [
+              "Early American imprints -- no. 9582."
+            ],
+            "physical_format": "Microform",
+            "subjects": [
+              "Sailors -- United States.",
+              "United States -- Commerce."
+            ],
+            "publish_country": "dcu",
+            "publish_places": [
+              "[Washington?"
+            ],
+            "type": {
+              "key": "/type/edition"
+            },
+            "source_records": [
+              "marc:marc_oregon_summit_records/catalog_files/osu_bibs.mrc:1250707634:1285"
+            ],
+            "key": "/books/OL17705612M",
+            "works": [
+              {
+                "key": "/works/OL11371581W"
+              }
+            ],
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+              "type": "/type/datetime",
+              "value": "2008-09-30T15:25:03.449048"
+            },
+            "last_modified": {
+              "type": "/type/datetime",
+              "value": "2026-01-20T03:24:51.803013"
+            }
+          },
+          {
+            "notes": {
+              "type": "/type/text",
+              "value": "\"December 22, 1807, referred to a committee of the whole House to-morrow.\"\n\nShaw & Shoemaker, 14010\n\nMicrofiche. New Canaan, CT : Readex. microfiches. (Early American imprints.  Second series ; no. 14010)"
+            },
+            "title": "Mr. Crowninshield's motion",
+            "authors": [
+              {
+                "key": "/authors/OL4775697A"
+              }
+            ],
+            "publish_date": "1807",
+            "publishers": [
+              "A. & G. Way, printers"
+            ],
+            "series": [
+              "Early American imprints -- no. 14010"
+            ],
+            "physical_format": "Microform",
+            "publish_places": [
+              "City of Washington"
+            ],
+            "contributions": [
+              "United States. Congress. Senate"
+            ],
+            "pagination": "[2] p.",
+            "languages": [
+              {
+                "key": "/languages/eng"
+              }
+            ],
+            "subjects": [
+              "Telegraph lines -- United States"
+            ],
+            "publish_country": "xx ",
+            "type": {
+              "key": "/type/edition"
+            },
+            "source_records": [
+              "marc:marc_miami_univ_ohio/allbibs0113.out:12344437:1153"
+            ],
+            "key": "/books/OL15092224M",
+            "works": [
+              {
+                "key": "/works/OL11371581W"
+              }
+            ],
+            "latest_revision": 4,
+            "revision": 4,
+            "created": {
+              "type": "/type/datetime",
+              "value": "2008-09-17T23:34:00.825461"
+            },
+            "last_modified": {
+              "type": "/type/datetime",
+              "value": "2025-12-27T01:08:30.627462"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
