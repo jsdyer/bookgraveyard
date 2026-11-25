@@ -1,0 +1,5 @@
+export const validId=s=>typeof s==='string'&&/^[A-Za-z0-9][A-Za-z0-9._-]{0,199}$/.test(s);
+export function readingMinutes(words,wpm=250){if(!Number.isFinite(words)||words<1||!Number.isFinite(wpm)||wpm<100||wpm>600)throw Error('Use a reading speed from 100 to 600 words per minute.');return Math.ceil(words/wpm);}
+export function filterBooks(books,shelf,query=''){const q=query.trim().toLowerCase();return books.filter(b=>(!shelf||b.shelf===shelf)&&[b.title,String(b.author),b.region].join(' ').toLowerCase().includes(q));}
+export function passageFor(books,rng=Math.random){const pool=books.flatMap(book=>book.passages.map(p=>({book,passage:p})));return pool.length?pool[Math.min(pool.length-1,Math.floor(Math.max(0,rng())*pool.length))]:null;}
+export function readingList(raw){const x=typeof raw==='string'?JSON.parse(raw):raw;if(x?.schema!=='bookgraveyard.canadian-list.v1'||!Array.isArray(x.ids)||x.ids.length>200||x.ids.some(v=>!validId(v)))throw Error('Invalid Canadian reading list.');return [...new Set(x.ids)];}

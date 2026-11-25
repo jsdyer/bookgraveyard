@@ -1,0 +1,462 @@
+{
+  "schema": "bookgraveyard.canadian.v1",
+  "checkedAt": "2026-11-25T13:12:38.627999+00:00",
+  "books": [
+    {
+      "id": "anneofgreengable00045gut",
+      "gutenbergId": 45,
+      "region": "Prince Edward Island",
+      "shelf": "Canadian authors",
+      "title": "Anne of Green Gables",
+      "author": "Montgomery, L. M. (Lucy Maud), 1874-1942",
+      "checkedAt": "2026-11-25T13:12:38.627999+00:00",
+      "wordCount": 104724,
+      "passages": [
+        {
+          "index": 1,
+          "text": "Mrs. Rachel Lynde lived just where the Avonlea main road dipped down into a little hollow, fringed with alders and ladies' eardrops and traversed by a brook that had its source away back in the woods of the old Cuthbert place; it was reputed to be an intricate, headlong brook in its earlier course through those woods, with dark secrets of pool and cascade; but by the time it reached Lynde's Hollow it was a quiet, well-conducted little stream, for not even a brook could run past Mrs. Rachel Lynde's door without due regard for decency and decorum; it probably was conscious that Mrs. Rachel was sitting at her window, keeping a sharp eye on everything that passed, from brooks and children up, and that if she noticed anything odd or out of place she would never rest until she had ferreted out the whys and wherefores thereof."
+        },
+        {
+          "index": 2,
+          "text": "\"The five-thirty train has been in and gone half an hour ago,\" answered that brisk official. \"But there was a passenger dropped off for you--a little girl. She's sitting out there on the shingles. I asked her to go into the ladies' waiting room, but she informed me gravely that she preferred to stay outside. `There was more scope for imagination,' she said. She's a case, I should say.\""
+        },
+        {
+          "index": 3,
+          "text": "Marilla went slowly down to the kitchen and proceeded to wash the supper dishes. Matthew was smoking--a sure sign of perturbation of mind. He seldom smoked, for Marilla set her face against it as a filthy habit; but at certain times and seasons he felt driven to it and them Marilla winked at the practice, realizing that a mere man must have some vent for his emotions."
+        },
+        {
+          "index": 4,
+          "text": "\"Isn't the sea wonderful?\" said Anne, rousing from a long, wide-eyed silence. \"Once, when I lived in Marysville, Mr. Thomas hired an express wagon and took us all to spend the day at the shore ten miles away. I enjoyed every moment of that day, even if I had to look after the children all the time. I lived it over in happy dreams for years. But this shore is nicer than the Marysville shore. Aren't those gulls splendid? Would you like to be a gull? I think I would--that is, if I couldn't be a human girl. Don't you think it would be nice to wake up at sunrise and swoop down over the water and away out over that lovely blue all day; and then at night to fly back to one's nest? Oh, I can just imagine myself doing it. What big house is that just ahead, please?\""
+        },
+        {
+          "index": 5,
+          "text": "\"Matthew Cuthbert, it's about time somebody adopted that child and taught her something. She's next door to a perfect heathen. Will you believe that she never said a prayer in her life till tonight? I'll send her to the manse tomorrow and borrow the Peep of the Day series, that's what I'll do. And she shall go to Sunday-school just as soon as I can get some suitable clothes made for her. I foresee that I shall have my hands full. Well, well, we can't get through this world without our share of trouble. I've had a pretty easy life of it so far, but my time has come at last and I suppose I'll just have to make the best of it.\""
+        },
+        {
+          "index": 6,
+          "text": "Anne came running in presently, her face sparkling with the delight of her orchard rovings; but, abashed at finding the delight herself in the unexpected presence of a stranger, she halted confusedly inside the door. She certainly was an odd-looking little creature in the short tight wincey dress she had worn from the asylum, below which her thin legs seemed ungracefully long. Her freckles were more numerous and obtrusive than ever; the wind had ruffled her hatless hair into over-brilliant disorder; it had never looked redder than at that moment."
+        },
+        {
+          "index": 7,
+          "text": "\"Saying one's prayers isn't exactly the same thing as praying,\" said Anne meditatively. \"But I'm going to imagine that I'm the wind that is blowing up there in those tree tops. When I get tired of the trees I'll imagine I'm gently waving down here in the ferns--and then I'll fly over to Mrs. Lynde's garden and set the flowers dancing--and then I'll go with one great swoop over the clover field--and then I'll blow over the Lake of Shining Waters and ripple it all up into little sparkling waves. Oh, there's so much scope for imagination in a wind! So I'll not talk any more just now, Marilla.\""
+        },
+        {
+          "index": 8,
+          "text": "The Barry garden was a bowery wilderness of flowers which would have delighted Anne's heart at any time less fraught with destiny. It was encircled by huge old willows and tall firs, beneath which flourished flowers that loved the shade. Prim, right-angled paths neatly bordered with clamshells, intersected it like moist red ribbons and in the beds between old-fashioned flowers ran riot. There were rosy bleeding-hearts and great splendid crimson peonies; white, fragrant narcissi and thorny, sweet Scotch roses; pink and blue and white columbines and lilac-tinted Bouncing Bets; clumps of southernwood and ribbon grass and mint; purple Adam-and-Eve, daffodils, and masses of sweet clover white with its delicate, fragrant, feathery sprays; scarlet lightning that shot its fiery lances over prim white musk-flowers; a garden it was where sunshine lingered and bees hummed, and winds, beguiled into loitering, purred and rustled."
+        },
+        {
+          "index": 9,
+          "text": "\"Not that lovers ever really walk there,\" she explained to Marilla, \"but Diana and I are reading a perfectly magnificent book and there's a Lover's Lane in it. So we want to have one, too. And it's a very pretty name, don't you think? So romantic! We can't imagine the lovers into it, you know. I like that lane because you can think out loud there without people calling you crazy.\""
+        },
+        {
+          "index": 10,
+          "text": "Marilla saw something remarkably like unyielding stubbornness looking out of Anne's small face. She understood that she would have trouble in overcoming it; but she re-solved wisely to say nothing more just then. \"I'll run down and see Rachel about it this evening,\" she thought. \"There's no use reasoning with Anne now. She's too worked up and I've an idea she can be awful stubborn if she takes the notion. Far as I can make out from her story, Mr. Phillips has been carrying matters with a rather high hand. But it would never do to say so to her. I'll just talk it over with Rachel. She's sent ten children to school and she ought to know something about it. She'll have heard the whole story, too, by this time.\""
+        },
+        {
+          "index": 11,
+          "text": "Marilla whisked into the kitchen, grievously disturbed, leaving a very much distracted little soul in the porch behind her. Presently Anne stepped out bareheaded into the chill autumn dusk; very determinedly and steadily she took her way down through the sere clover field over the log bridge and up through the spruce grove, lighted by a pale little moon hanging low over the western woods. Mrs. Barry, coming to the door in answer to a timid knock, found a white-lipped eager-eyed suppliant on the doorstep."
+        },
+        {
+          "index": 12,
+          "text": "\"Minnie May has croup all right; she's pretty bad, but I've seen them worse. First we must have lots of hot water. I declare, Diana, there isn't more than a cupful in the kettle! There, I've filled it up, and, Mary Joe, you may put some wood in the stove. I don't want to hurt your feelings but it seems to me you might have thought of this before if you'd any imagination. Now, I'll undress Minnie May and put her to bed and you try to find some soft flannel cloths, Diana. I'm going to give her a dose of ipecac first of all.\""
+        },
+        {
+          "index": 13,
+          "text": "It was eleven when they got home, sated with dissipation, but with the exceeding sweet pleasure of talking it all over still to come. Everybody seemed asleep and the house was dark and silent. Anne and Diana tiptoed into the parlor, a long narrow room out of which the spare room opened. It was pleasantly warm and dimly lighted by the embers of a fire in the grate."
+        },
+        {
+          "index": 14,
+          "text": "\"Oh, of course he's good,\" agreed Anne, \"but he doesn't seem to get any comfort out of it. If I could be good I'd dance and sing all day because I was glad of it. I suppose Mrs. Allan is too old to dance and sing and of course it wouldn't be dignified in a minister's wife. But I can just feel she's glad she's a Christian and that she'd be one even if she could get to heaven without it.\""
+        },
+        {
+          "index": 15,
+          "text": "\"But you have such strength of mind, Marilla. I haven't. I just felt that I couldn't bear Josie Pye's scorn. She would have crowed over me all my life. And I think I have been punished so much that you needn't be very cross with me, Marilla. It's not a bit nice to faint, after all. And the doctor hurt me dreadfully when he was setting my ankle. I won't be able to go around for six or seven weeks and I'll miss the new lady teacher. She won't be new any more by the time I'm able to go to school. And Gil-- everybody will get ahead of me in class. Oh, I am an afflicted mortal. But I'll try to bear it all bravely if only you won't be cross with me, Marilla.\""
+        },
+        {
+          "index": 16,
+          "text": "\"Oh, I was so nervous, Diana. When Mr. Allan called out my name I really cannot tell how I ever got up on that platform. I felt as if a million eyes were looking at me and through me, and for one dreadful moment I was sure I couldn't begin at all. Then I thought of my lovely puffed sleeves and took courage. I knew that I must live up to those sleeves, Diana. So I started in, and my voice seemed to be coming from ever so far away. I just felt like a parrot. It's providential that I practiced those recitations so often up in the garret, or I'd never have been able to get through. Did I groan all right?\""
+        },
+        {
+          "index": 17,
+          "text": "\"Yes, I will, too. I'd do penance for being wicked that way. I'll look at myself every time I come to my room and see how ugly I am. And I won't try to imagine it away, either. I never thought I was vain about my hair, of all things, but now I know I was, in spite of its being red, because it was so long and thick and curly. I expect something will happen to my nose next.\""
+        },
+        {
+          "index": 18,
+          "text": "Anne was dressed by the time Matthew had the fire on and had the breakfast ready when Marilla came down, but for her own part was much too excited to eat. After breakfast the jaunty new cap and jacket were donned, and Anne hastened over the brook and up through the firs to Orchard Slope. Mr. Barry and Diana were waiting for her, and they were soon on the road."
+        },
+        {
+          "index": 19,
+          "text": "This message frightened Marilla wholesomely. She read Anne's death warrant by consumption in it unless it was scrupulously obeyed. As a result, Anne had the golden summer of her life as far as freedom and frolic went. She walked, rowed, berried, and dreamed to her heart's content; and when September came she was bright-eyed and alert, with a step that would have satisfied the Spencervale doctor and a heart full of ambition and zest once more."
+        },
+        {
+          "index": 20,
+          "text": "When three weeks had gone by without the pass list appearing Anne began to feel that she really couldn't stand the strain much longer. Her appetite failed and her interest in Avonlea doings languished. Mrs. Lynde wanted to know what else you could expect with a Tory superintendent of education at the head of affairs, and Matthew, noting Anne's paleness and indifference and the lagging steps that bore her home from the post office every afternoon, began seriously to wonder if he hadn't better vote Grit at the next election."
+        },
+        {
+          "index": 21,
+          "text": "\"I've a compliment for you, Anne,\" said Diana. \"At least I think it must be a compliment because of the tone he said it in. Part of it was anyhow. There was an American sitting behind Jane and me--such a romantic-looking man, with coal-black hair and eyes. Josie Pye says he is a distinguished artist, and that her mother's cousin in Boston is married to a man that used to go to school with him. Well, we heard him say--didn't we, Jane?--`Who is that girl on the platform with the splendid Titian hair? She has a face I should like to paint.' There now, Anne. But what does Titian hair mean?\""
+        },
+        {
+          "index": 22,
+          "text": "After the Christmas holidays the Avonlea students gave up going home on Fridays and settled down to hard work. By this time all the Queen's scholars had gravitated into their own places in the ranks and the various classes had assumed distinct and settled shadings of individuality. Certain facts had become generally accepted. It was admitted that the medal contestants had practically narrowed down to three--Gilbert Blythe, Anne Shirley, and Lewis Wilson; the Avery scholarship was more doubtful, any one of a certain six being a possible winner. The bronze medal for mathematics was considered as good as won by a fat, funny little up-country boy with a bumpy forehead and a patched coat."
+        },
+        {
+          "index": 23,
+          "text": "When the calm night came softly down over Green Gables the old house was hushed and tranquil. In the parlor lay Matthew Cuthbert in his coffin, his long gray hair framing his placid face on which there was a little kindly smile as if he but slept, dreaming pleasant dreams. There were flowers about him--sweet old-fashioned flowers which his mother had planted in the homestead garden in her bridal days and for which Matthew had always had a secret, wordless love. Anne had gathered them and brought them to him, her anguished, tearless eyes burning in her white face. It was the last thing she could do for him."
+        },
+        {
+          "index": 24,
+          "text": "Anne's horizons had closed in since the night she had sat there after coming home from Queen's; but if the path set before her feet was to be narrow she knew that flowers of quiet happiness would bloom along it. The joy of sincere work and worthy aspiration and congenial friendship were to be hers; nothing could rob her of her birthright of fancy or her ideal world of dreams. And there was always the bend in the road!"
+        }
+      ],
+      "epubListed": false,
+      "source": "https://archive.org/details/anneofgreengable00045gut",
+      "textSource": "https://archive.org/download/anneofgreengable00045gut/anne11.txt",
+      "formatsSource": "https://www.gutenberg.org/ebooks/45",
+      "rights": "Mirror records NOT_IN_COPYRIGHT in the United States; confirm rights where you are.",
+      "wordCountMethod": "Approximate words in mirrored plain text, excluding recognized Gutenberg licence delimiters; may include front matter."
+    },
+    {
+      "id": "sunshinesketches03533gut",
+      "gutenbergId": 3533,
+      "region": "Ontario",
+      "shelf": "Canadian authors",
+      "title": "Sunshine Sketches of a Little Town",
+      "author": "Leacock, Stephen, 1869-1944",
+      "checkedAt": "2026-11-25T13:12:38.627999+00:00",
+      "wordCount": 62998,
+      "passages": [
+        {
+          "index": 1,
+          "text": "I The Hostelry of Mr. Smith II The Speculations of Jefferson Thorpe III The Marine Excursion of the Knights of Pythias IV The Ministrations of the Rev. Mr. Drone V The Whirlwind Campaign in Mariposa VI The Beacon on the Hill VII The Extraordinary Entanglement of Mr. Pupkin VIII The Fore-ordained Attachment of Zena Pepperleigh and Peter Pupkin IX The Mariposa Bank Mystery X The Great Election in Missinaba County XI The Candidacy of Mr. Smith XII L'Envoi. The Train to Mariposa"
+        },
+        {
+          "index": 2,
+          "text": "I can tell you the people of Mariposa are proud of the trains, even if they don't stop! The joy of being on the main line lifts the Mariposa people above the level of their neighbours in such places as Tecumseh and Nichols Corners into the cosmopolitan atmosphere of through traffic and the larger life. Of course, they have their own train, too--the Mariposa Local, made up right there in the station yard, and running south to the city a hundred miles away. That, of course, is a real train, with a box stove on end in the passenger car, fed with cordwood upside down, and with seventeen flat cars of pine lumber set between the passenger car and the locomotive so as to give the train its full impact when shunting."
+        },
+        {
+          "index": 3,
+          "text": "Not but what there was opposition at first. The clergy, for example, who accepted the Mariposa House and the Continental as a necessary and useful evil, looked askance at the blazing lights and the surging crowd of Mr. Smith's saloon. They preached against him. When the Rev. Dean Drone led off with a sermon on the text \"Lord be merciful even unto this publican Matthew Six,\" it was generally understood as an invitation to strike Mr. Smith dead. In the same way the sermon at the Presbyterian church the week after was on the text \"Lo what now doeth Abiram in the land of Melchisideck Kings Eight and Nine?\" and it was perfectly plain that what was meant was, \"Lo, what is Josh Smith doing in Mariposa?\""
+        },
+        {
+          "index": 4,
+          "text": "The \"girl room,\" I may say, was never opened. Mr. Smith promised it, it is true, for the winter, and still talks of it. But somehow there's been a sort of feeling against it. Every one in town admits that every big hotel in the city has a \"girl room\" and that it must be all right. Still, there's a certain--well, you know how sensitive opinion is in a place like Mariposa."
+        },
+        {
+          "index": 5,
+          "text": "But what with reading about Amalgamated Asbestos and Consolidated Copper and all that, the hens began to seem pretty small business, and, in any case, the idea of two dozen eggs at a cent apiece almost makes one blush. I suppose a good many of us have felt just as Jeff did about our poor little earnings. Anyway, I remember Jeff telling me one day that he could take the whole lot of the hens and sell them off and crack the money into Chicago wheat on margin and turn it over in twenty-four hours. He did it too. Only somehow when it was turned over it came upside down on top of the hens."
+        },
+        {
+          "index": 6,
+          "text": "So within a month, everybody in Mariposa knew that Jeff Thorpe was \"in Cuban lands\" and would probably clean up half a million by New Year's. You couldn't have failed to know it. All round the little shop there were pictures of banana groves and the harbour of Habana, and Cubans in white suits and scarlet sashes, smoking cigarettes in the sun and too ignorant to know that you can make four hundred per cent. by planting a banana tree."
+        },
+        {
+          "index": 7,
+          "text": "Then on the Fourth of July there are stars and stripes flying over half the stores in town, and suddenly all the men are seen to smoke cigars, and to know all about Roosevelt and Bryan and the Philippine Islands. Then you learn for the first time that Jeff Thorpe's people came from Massachusetts and that his uncle fought at Bunker Hill (it must have been Bunker Hill,--anyway Jefferson will swear it was in Dakota all right enough); and you find that George Duff has a married sister in Rochester and that her husband is all right; in fact, George was down there as recently as eight years ago. Oh, it's the most American town imaginable is Mariposa,--on the fourth of July."
+        },
+        {
+          "index": 8,
+          "text": "Down the lake, mile by mile over the calm water, steamed the Mariposa Belle. They passed Poplar Point where the high sand-banks are with all the swallows' nests in them, and Dean Drone and Dr. Gallagher looked at them alternately through the binocular glasses, and it was wonderful how plainly one could see the swallows and the banks and the shrubs,--just as plainly as with the naked eye."
+        },
+        {
+          "index": 9,
+          "text": "Pupkin, the other bank teller, with a face like a horse, who hadn't gone on the excursion,--as soon as he knew that the boat was signalling for help and that Miss Lawson was sending up rockets,--rushed for a row boat, grabbed an oar (two would have hampered him), and paddled madly out into the lake. He struck right out into the dark with the crazy skiff almost sinking beneath his feet. But they got him. They rescued him. They watched him, almost dead with exhaustion, make his way to the steamer, where he was hauled up with ropes. Saved! Saved!!"
+        },
+        {
+          "index": 10,
+          "text": "But the building of the church, no one, I think, will forget. The Dean threw himself into the work. With his coat off and his white shirt-sleeves conspicuous among the gang that were working at the foundations, he set his hand to the shovel, himself guided the road-scraper, urging on the horses; cheering and encouraging the men, till they begged him to desist. He mingled with the stone-masons, advising, helping, and giving counsel, till they pleaded with him to rest. He was among the carpenters, sawing, hammering, enquiring, suggesting, till they besought him to lay off. And he was night and day with the architect's assistants, drawing, planning, revising, till the architect told him to cut it out."
+        },
+        {
+          "index": 11,
+          "text": "So things went on from month to month, and from year to year, and the debt and the charges loomed like a dark and gathering cloud on the horizon. I don't mean to say that efforts were not made to face the difficulty and to fight it. They were. Time after time the workers of the congregation got together and thought out plans for the extinction of the debt. But somehow, after every trial, the debt grew larger with each year, and every system that could be devised turned out more hopeless than the last."
+        },
+        {
+          "index": 12,
+          "text": "Of course the excitement was when Henry Mullins at the head of the table began reading out the telegrams and letters and messages. First of all there was a telegram of good wishes from the Anglican Lord Bishop of the Diocese to Henry Mullins and calling him Dear Brother in Grace the Mariposa telegraph office is a little unreliable and it read: \"Dear Brother in grease,\" but that was good enough. The Bishop said that his most earnest wishes were with them."
+        },
+        {
+          "index": 13,
+          "text": "Indeed, the only time when the rector seemed animated and excited in the whole interview was when Mullins said that the campaign had been ruined by a lot of confounded mugwumps. Straight away the Dean asked if those mugwumps had really prejudiced the outcome of the campaign. Mullins said there was no doubt of it, and the Dean enquired if the presence of mugwumps was fatal in matters of endeavour, and Mullins said that it was. Then the rector asked if even one mugwump was, in the Christian sense, deleterious. Mullins said that one mugwump would kill anything. After that the Dean hardly spoke at all."
+        },
+        {
+          "index": 14,
+          "text": "Most noticeable of all you could see the sidesmen and the wardens and Mullins, the chairman of the vestry, talking in little groups about the fire. Later in the day there came from the city the insurance men and the fire appraisers, and they too walked about the ruins, and talked with the wardens and the vestry men. There was such a luxury of excitement in the town that day that it was just as good as a public holiday."
+        },
+        {
+          "index": 15,
+          "text": "That kind of reticence is a thing you simply have to learn in banking. I mean, if you've got to be in a position where you know for a fact that the Mariposa Packing Company's account is overdrawn by sixty-four dollars, and yet daren't say anything about it, not even to the girls that you play tennis with,--I don't say, not a casual hint as a reference, but not really tell them, not, for instance, bring down the bank ledger to the tennis court and show them,--you learn a sort of reticence and self-control that people outside of banking circles never can attain."
+        },
+        {
+          "index": 16,
+          "text": "Sometimes when you noticed a sweet look of resignation that seemed to rest upon her features, it meant that Lord Ronald de Chevereux was kneeling at her feet, and that she was telling him to rise, that her humbler birth must ever be a bar to their happiness, and Lord Ronald was getting into an awful state about it, as English peers do at the least suggestion of anything of the sort."
+        },
+        {
+          "index": 17,
+          "text": "Then there was Zena's father. Heaven knows Pupkin tried hard to please the judge. He agreed with every theory that Judge Pepperleigh advanced, and that took a pretty pliable intellect in itself. They denounced female suffrage one day and they favoured it the next. One day the judge would claim that the labour movement was eating out the heart of the country, and the next day he would hold that the hope of the world lay in the organization of the toiling masses. Pupkin shifted his opinions like the glass in a kaleidoscope. Indeed, the only things on which he was allowed to maintain a steadfast conviction were the purity of the Conservative party of Canada and the awful wickedness of the recall of judges."
+        },
+        {
+          "index": 18,
+          "text": "What's the use of thinking you can stop people drinking merely by cutting off whiskey and brandy? The only effect is to drive them to taking lemon sour and sarsaparilla and cherry pectoral and caroka cordial and things they wouldn't have touched before. So in the long run they drink more than ever. The point is that you can't prevent people having a good time, no matter how hard you try. If they can't have it with lager beer and brandy, they'll have it with plain soda and lemon pop, and so the whole gloomy scheme of the temperance people breaks down, anyway."
+        },
+        {
+          "index": 19,
+          "text": "This, I say, and it is important to note it, was what they knew at half-past seven. Of course as each hour went past they learned more and more. At eight o'clock it was known that Pupkin was not dead, but dangerously wounded in the lungs. At eight-thirty it was known that he was not shot in the lungs, but that the ball had traversed the pit of his stomach."
+        },
+        {
+          "index": 20,
+          "text": "Now that it is all over, we can look back at it without heat or passion. We can see,--it's plain enough now,--that in the great election Canada saved the British Empire, and that Missinaba saved Canada and that the vote of the Third Concession of Tecumseh Township saved Missinaba County, and that those of us who carried the third concession,--well, there's no need to push it further. We prefer to be modest about it. If we still speak of it, it is only quietly and simply and not more than three or four times a day."
+        },
+        {
+          "index": 21,
+          "text": "\"My only fear is,\" continued the old war horse, losing some of his animation, \"that Drone won't run after all. He's said it so often before and never has. He hasn't got the money. But we must see to that. Gingham, you know his brother well; you must work it so that we pay Drone's deposit and his campaign expenses. But how like Drone it is to come out at this time!\""
+        },
+        {
+          "index": 22,
+          "text": "\"Shove it up to four,\" said Mr. Smith: \"And I tell you,\" he added, \"if any of them farmers says the figures ain't correct, tell them to go to Washington and see for themselves; say that if any man wants the proof of your figures let him go over to England and ask,--tell him to go straight to London and see it all for himself in the books.\""
+        },
+        {
+          "index": 23,
+          "text": "Do you remember how when you first began to make money you used to plan that just as soon as you were rich, really rich, you'd go back home again to the little town and build a great big house with a fine verandah,--no stint about it, the best that money could buy, planed lumber, every square foot of it, and a fine picket fence in front of it."
+        },
+        {
+          "index": 24,
+          "text": "What? it feels nervous and strange to be coming here again after all these years? It must indeed. No, don't bother to look at the reflection of your face in the window-pane shadowed by the night outside. Nobody could tell you now after all these years. Your face has changed in these long years of money-getting in the city. Perhaps if you had come back now and again, just at odd times, it wouldn't have been so."
+        }
+      ],
+      "epubListed": false,
+      "source": "https://archive.org/details/sunshinesketches03533gut",
+      "textSource": "https://archive.org/download/sunshinesketches03533gut/ssklt10.txt",
+      "formatsSource": "https://www.gutenberg.org/ebooks/3533",
+      "rights": "Mirror records NOT_IN_COPYRIGHT in the United States; confirm rights where you are.",
+      "wordCountMethod": "Approximate words in mirrored plain text, excluding recognized Gutenberg licence delimiters; may include front matter."
+    },
+    {
+      "id": "theclockmakerort05817gut",
+      "gutenbergId": 5817,
+      "region": "Nova Scotia",
+      "shelf": "Nova Scotia",
+      "title": "The Clockmaker - or, the Sayings and Doings of Samuel Slick, of Slickville",
+      "author": "Haliburton, Thomas Chandler, 1796-1865",
+      "checkedAt": "2026-11-25T13:12:38.627999+00:00",
+      "wordCount": 72958,
+      "passages": [
+        {
+          "index": 1,
+          "text": "The following Sketches, as far as the twenty-first No. originally appeared in \"THE NOVASCOTIAN\" newspaper. The great popularity they acquired, induced the Editor of that paper, to apply to the Author for the remaining part of the series, and permission to publish the whole entire. This request having been acceded to, the Editor has now the pleasure of laying them before the public in their present shape."
+        },
+        {
+          "index": 2,
+          "text": "Yes, make me an offer, and you and I will trade, I think. But fair play's a jewel, and I must say I feel ryled and kinder sore. I han't been used handsum atween you two, and it don't seem to me that I had ought to be made a fool on in that book, arter that fashion, for folks to laugh at, and then be sheered out of the spec. If I am, somebody had better look out for squalls, I tell you. I'm as easy as an old glove, but a glove aint an old shoe to be trod on, and I think a certain person will find that out afore he is six months older, or else I'm mistakened, that's all. Hopin to hear from you soon, I remain yours to command,"
+        },
+        {
+          "index": 3,
+          "text": "That, said the Clockmaker as soon as we were mounted, that I call 'HUMAN NATUR!' Now that clock is sold for 40 dollars--it cost me just 6 dollars and 50 cents. Mrs. Flint will never let Mrs. Steel have the refusal--nor will the deacon learn until I call for the clock, that having once indulged in the use of a superfluity, how difficult it is to give it up. We can do without any article of luxury we have never had, but when once obtained, it is not 'IN HUMAN NATUR' to surrender it voluntarily. Of fifteen thousand sold by myself and partners in this Province, twelve thousand were left in this manner, and only ten clocks were ever returned-- when we called for them they invariably bought them. We trust to 'SOFT SAWDER' to get them into the house, and to 'HUMAN NATUR' that they never come out of it."
+        },
+        {
+          "index": 4,
+          "text": "Do you see them are swallows, said the Clockmaker, how low they fly? Well I presume we shall have rain right away, and them noisy critters, them gulls how close they keep to the water, down there in the Shubenacadie; well that's a sure sign. If we study natur, we don't want no thermometer. But I guess we shall be in time to get under cover in a shingle-maker's shed about three miles ahead on us. We had just reached the deserted hovel when the rain fell in torrents."
+        },
+        {
+          "index": 5,
+          "text": "Do you know the reason monkeys are no good? because they chatter all day long--so do the niggers--and so do the Blue Noses of Nova Scotia--its all talk and no work; now, with us its all work and no talk--in our ship yards, our factories, our mills, and even in our Vessels, there's no talk--a man can't work and talk too. I guess if you were at the factories at Lowell we'd show you a wonder --five hundred galls at work together, all in silence. I don't think our great country has such a real natural curiosity as that--I expect the world don't contain the beat of that; for a woman's tongue goes so slick of itself, without water power or steam, and moves so easy on its hinges, that its no easy matter to put a spring stop on it, I tell you--it comes as natural as drinkin mint julip."
+        },
+        {
+          "index": 6,
+          "text": "I don't pretend to say the galls don't nullify the rule, sometimes at intermission and arter hours, but when they do, if they don't let go, then its a pity. You have heerd a school come out, of little boys, Lord its no touch to it; or a flock of geese at it, they are no more a match for em than a pony is for a coach-horse. But when they are at work, all's as still as sleep and no snoring. I guess we have a right to brag o' that invention--we trained the dear critters, so they don't think of striking the minutes and seconds no longer."
+        },
+        {
+          "index": 7,
+          "text": "When we want folks to talk, we pay 'em for it, such as ministers, lawyers, and members of congress: but then we expect the use of their tongues, and not their hands; and when we pay folks to work, we expect the use of their hands, and not their tongues. I guess work don't come kind o' natural to the people of this Province, no more than it does to a full bred horse. I expect they think they have a little TOO MUCH BLOOD in 'em for work, for they are near about as proud as they are lazy."
+        },
+        {
+          "index": 8,
+          "text": "Now the bees know how to sarve out such chaps, for they have their drones too. Well they reckon its no fun, a making honey all summer, for these idle critters to eat all winter--so they give 'em Lynch Law. They have a regular built mob of citizens, and string up the drones like the Vixburg gamblers. Their maxim is, and not a bad one neither I guess, 'no work, no honey.'"
+        },
+        {
+          "index": 9,
+          "text": "People soon began to assemble, some on foot, and others on horseback and in waggons--Pugnose's tavern was all bustle and confusion--Plaintiffs, Defendants, and witnesses, all talking, quarreling, explaining, and drinking. Here comes the Squire, said one--I'm thinking his horse carries more roguery than law, said another; they must have been in proper want of timber to make a justice of, said a third, when they took such a crooked stick as that; sap headed enough too for refuse, said a stout looking farmer; may be so, said another, but as bard at the heart as a log of elm; howsomever, said a third, I hope it wont be long afore he has the wainy edge scored off of him, any how. Many more such remarks were made, all drawn from familiar objects, but all expressive of bitterness and contempt."
+        },
+        {
+          "index": 10,
+          "text": "I guess all that's nothin, said he. As for Latin and Greek, we don't valy it a cent; we teach it, and so we do painting and music, because the English do, and we like to go ahead on em, even in them are things. As for reading, its well enough for them that has nothing to do, and writing is plaguy apt to bring a man to States-prison, particularly if he writes his name so like another man as to have it mistaken for his'n. Cyphering is the thing--if a man knows how to cypher, he is sure to grow rich. We are a 'calculating' people, we all cypher."
+        },
+        {
+          "index": 11,
+          "text": "A Bear always goes down a tree STARN FOREMOST. He is a cunning critter, he knows tante safe to carry a heavy load over his head, and his rump is so heavy, he don't like to trust it over hisn, for fear it might take a lurch, and carry him heels over head, to the ground; so he lets his starn down first, and his head arter. I wish the Blue Noses would find as good an excuse in their rumps for running backwards as he has. But the bear 'CYPHERS;' he knows how many pounds his hams weigh, and he 'CALCULATES' if he carried them up in the air, they might be top heavy for him."
+        },
+        {
+          "index": 12,
+          "text": "If we had this Province we'd go to work and 'cypher' right off. Halifax is nothing without a river or back country; add nothing to nothing, and I guess you have nothing still--add a Rail Road to the Bay of Fundy, and how much do you get? That requires cyphering--it will cost $300,000, or 75,000 pounds your money--add for notions omitted in the addition column, one third, and it makes even money --100,000 pounds. Interest at 5 per cent 5,000 pounds a year. Now turn over the slate and count up freight--I make it upwards of 25,000 pounds a year. If I had you at the desk, I'd shew you a bill of items."
+        },
+        {
+          "index": 13,
+          "text": "What is it, he continued, what is it that 'fetters' the heels of a young country, and hangs like 'a poke' around its neck? what retards the cultivation of its soil, and the improvement of its fisheries?--the high price of labor, I guess. Well, what's a rail-road? The substitution of mechanical for human and animal labor, on a scale as grand as our great country. Labor is dear in America, and cheap in Europe. A rail-road, therefore, is comparatively no manner of use to them, to what it is to us--it does wonders there, but it works miracles here. There it makes the old man younger, but here it makes a child a giant. To us it is river, bridge, road and canal, all one. It saves what we han't got to spare, men, horses, carts, vessels, barges, and what's all in all--time."
+        },
+        {
+          "index": 14,
+          "text": "As the door closed, Mr. Slick said, it's a pity she don't go well in gear. The difficulty with those critters is to get them to start, arter that there is no trouble with them if you don't check 'em too short If you do, they'll stop again, run back and kick like mad, and then Old Nick himself would'nt start 'em. Pugwash, I guess, don't understand the natur of the critter; she'll never go kind in harness for him. When I see a child, said the Clockmaker, I always feel safe with these women folk; for I have always found that the road to a woman's heart lies through her child."
+        },
+        {
+          "index": 15,
+          "text": "What on airth are you drivin at? said Mr. Slick. I never seed you so much out in your latitude afore, marm, I vow. We were talking of reparin a vessel, not strippin' a woman, what under the sun could have put that are crotchet into your head? She looked mortified and humbled at the result of her own absurd curiosity, and soon quitted the room. I thought I should have snorted right out two or three times, said the Clockmaker; I had to pucker up my mouth like the upper eend of a silk puss, to keep from yawhawin in her face, to hear the critter let her clapper run that fashion. She is not the first hand that has caught a lobster, by puttin in her oar afore her turn, I guess. She'll mind her stops next hitch, I reckon. This was our last breakfast at Amherst."
+        },
+        {
+          "index": 16,
+          "text": "An early frost that smote the potatoe fields, and changed the beautiful green color of the Indian corn into shades of light yellow, and dark brown, reminded me of the presence of autumn--of the season of short days and bad roads, I determined to proceed at once to Parrsboro, and thence by the Windsor and Kentville route to Annapolis, Yarmouth, and Shelburne, and to return by the shore road, through Liverpool and Lunenburg to Halifax. I therefore took leave, (though not without much reluctance) of the Clockmaker, whose intention had been to go to Fort Lawrence. Well, said he, I vow I am sorry to part company along with you; a considerable long journey like ourn, is like sitting up late with the galls, a body knows its getting on pretty well towards mornin, and yet feels loth to go to bed, for its just the time folks grow sociable."
+        },
+        {
+          "index": 17,
+          "text": "I got a scheme in my head, said he, that I think will answer both on us; I got debts due to me in all them are places for Clocks sold by the concarn, now suppose you leave your horse on these mashes this fall, he'll get as fat as a fool, he wont be able to see out of his eyes in a month, and I'll put \"Old Clay,\" (I call him Clay arter our senator, who is a prime bit of stuff) into a Yankee waggon I have here, and drive you all round the coast. This was too good an offer to be declined. A run at grass for my horse, an easy and comfortable waggon, and a guide so original and amusing as Mr. Slick, were either of them enough to induce my acquiescence."
+        },
+        {
+          "index": 18,
+          "text": "We had a most special time of it, you may depend, all except the minister; father got him into a corner, and gave him chapter and verse for the whole war. Every now and then as I come near them, I heard \"Bunker's Hill, Brandywine, Clinton, Gates,\" and so on. It was broad day when we parted, and the last that went was poor minister. Father followed him clean down to the gate, and says he, \"minister, we had'nt time this hitch, or I'd a told you all about the 'EVAKYATION' of New York, but I'll tell you that the next time we meet.\""
+        },
+        {
+          "index": 19,
+          "text": "Ahem! says Marm Drivvle, and she began to clear her throat for action; she slumped down her nittin, and clawed off her spectacles, and looked right straight at me, so as to take good aim. I seed a regular norwester a bruin, I knew it would bust somewhere sartan, and make all smoke agin, so I cleared out and left old Drivvle to stand the squall. I conceit he must have had a tempestical time of it, for she had get her Ebenezer up, and looked like a proper sneezer. Make her Johnny a farmer, eh! I guess that was too much for the like o' her to stomach."
+        },
+        {
+          "index": 20,
+          "text": "Now, what I have told you Squire, said the Clockmaker, is the truth; and if members, instead of their everlastin politicks, would only look into these matters a little, I guess it would be far better for the Country. So, as for our declaration of independence, I guess you need'nt twitt me with our slave-sales, for we deal only in blacks; but Blue Nose approbates no distinction in colours, and when reduced to poverty, is reduced to slavery, and is sold--a White Nigger."
+        },
+        {
+          "index": 21,
+          "text": "Whenever you come to such a grand place as this, Squire, depend on't the farm is all of a piece, great crops of thistles, and an everlastin yield of weeds, and cattle the best fed of any in the country, for they are always in the grain fields or mowin lands, and the pigs a rootin in the potatoe patches. A spic and span new gig at the door, shinin like the mud banks of Windsor, when the sun's on 'em, and an old wrack of a hay waggon, with its tongue onhitched, and stickin out behind, like a pig's tail, all indicate a big man. He's above thinkin of farmin tools, he sees to the bran new gig, and the hired helps look arter the carts. Catch him with his go to meetin clothes on, a rubbin agin their nasty greasy axles, like a tarry nigger; not he, indeed, he'd stick you up with it."
+        },
+        {
+          "index": 22,
+          "text": "I don't go the whole figur with minister, said the Clockmaker, but I do opinionate with him in part. In our business relations we bely our political principles--we say every man is equal in the Union, and should have an equal vote and voice in the Government; but in our Banks, Rail Road Companies, Factory Corporations, and so on, every man's vote is regilated by his share and proportion of stock; and if it warnt so, no man would take hold on these things at all."
+        },
+        {
+          "index": 23,
+          "text": "Then comes a real good man, and an everlastin fine preacher, a most a special spiritual man, renounces the world, the flesh, and the devil, preaches and prays day and night, so kind to the poor, and so humble, he has no more pride than a babe, and so short-handed he's no butter to his bread--all self denial, mortifyin the flesh. Well, as soon as he can work it, he marries the richest gall in all his flock, and then his bread is buttered on both sides. HE PROMISED TOO MUCH."
+        },
+        {
+          "index": 24,
+          "text": "Then comes a Lawyer, an honest lawyer too, a real wonder under the sun, as straight as a shingle in all his dealins. He's so honest he cant bear to hear tell of other lawyers, he writes agin 'em, raves agin 'em, votes agin 'em, they are all rogues but him. He's jist the man to take a case in hand, cause HE will see justice done. Well, he wins his case, and fobs all for costs, cause he's sworn to see justice done to--himself. HE PROMISED TOO MUCH."
+        }
+      ],
+      "epubListed": false,
+      "source": "https://archive.org/details/theclockmakerort05817gut",
+      "textSource": "https://archive.org/download/theclockmakerort05817gut/clckm10.txt",
+      "formatsSource": "https://www.gutenberg.org/ebooks/5817",
+      "rights": "Mirror records NOT_IN_COPYRIGHT in the United States; confirm rights where you are.",
+      "wordCountMethod": "Approximate words in mirrored plain text, excluding recognized Gutenberg licence delimiters; may include front matter."
+    },
+    {
+      "id": "thenewnorth12874gut",
+      "gutenbergId": 12874,
+      "region": "British Columbia author / northern Canada journey",
+      "shelf": "British Columbia",
+      "title": "The New North",
+      "author": "Cameron, Agnes Deans, 1863-1912",
+      "checkedAt": "2026-11-25T13:12:38.627999+00:00",
+      "wordCount": 95264,
+      "passages": [
+        {
+          "index": 1,
+          "text": "It is customary to write a preface. Mine shall be short. Out of a full heart, I wish to thank all the splendid people of the North who, by giving me so freely information and photographs, and chapters out of their own lives, have facilitated the writing of this story. For their spontaneous kindness to me and mine no acknowledgment that I can here make is adequate. What we feel most strongly we cannot put into words."
+        },
+        {
+          "index": 2,
+          "text": "When a Scot and an Indian get in a boat together, to use a Will Carleton phrase, \"they do not teem with conversational grace.\" Straight from Aberdeen, the young Dominee coming into Winnipeg little dreamed that the Church of Rome had established its Mission on the Red River decades ago. In fact, he knew as little about Canada as he did about Timbuctoo, and in his simplicity thought himself \"the first that ever burst into that silent sea.\" When the evening breeze brought to his ears a muffled sound, he was in doubt how to place it."
+        },
+        {
+          "index": 3,
+          "text": "The girlish figure of a teacher struggling through the awful mud in gum-boots indicates that we have not travelled beyond the range of the little red schoolhouse. Stray wee figures splashing their way schoolward look dreary enough, and I seem to hear the monotonous drone of \"seven times nine,\" \"the mountains of Asia,\" \"the Tudor sovereigns with dates of accession,\" and other things appertaining to \"that imperial palace whence I came.\" All the summer afterwards, when mosquitoes are plenty and food scarce, a backward thought to this teacher making muddy tracks toward the well of English undefiled, brings pleased content."
+        },
+        {
+          "index": 4,
+          "text": "Opposite the hotel is a reading-room built by a Methodist parson who also made the furniture with his own hands; magazines, books, writing-material, games are available to all. This practical work of one man who accepted the responsibility of being his brother's keeper appealed to us. In a store near the hotel we see a Cree boatman purchasing a farewell present for his sweetheart. As he turns over the fancy articles, we have bad form enough to observe his choice. He selects a fine-tooth comb, for which he pays fifty cents, or as he calls it, \"two skins,\" and asks, as he tucks it into his jerkin, if he can change it \"if she doesn't like it.\""
+        },
+        {
+          "index": 5,
+          "text": "At five in the morning there is a drawing-in of the fleet to Pelican Portage. Before two hours have passed the grasshopper has become a burden, and it is 102� in the shade, and no shade to be had. We are now a hundred miles from Athabasca Landing. On the left bank we come across a magnificent gas-well with a gush of flame twenty or thirty feet in height."
+        },
+        {
+          "index": 6,
+          "text": "From the distance sounds the ominous roar of the Big Cascade. At quarter past four we reach the head of the swirling fall. The underlying cause of the Big Cascade is a limestone ledge which cuts the channel diagonally and makes ugly-looking water. We plan to run the rapid one boat at a time. The crews are doubled. Our steersman is alert, expectant, and as agile as a cat, his black hair switching in the wind. Sitting in the centre of the scow, as we do, the sensation is very different to that which one experiences in running rapids in a canoe. Then it is all swiftness and dexterity, for your craft is light, and, in expert hands, easily dirigible with one clever turn of the wrist. With a ten-ton scow the conditions change and you feel correspondingly more helpless."
+        },
+        {
+          "index": 7,
+          "text": "In all Canada there is no more interesting stretch of waterway than that upon which we are entering. An earth-movement here has created a line of fault clearly visible for seventy or eighty miles along the river-bank, out of which oil oozes at frequent intervals. Count von Hammerstein, building derricks from point to point along the stream, has put in much time, toil, and money in oil-development here. Our traverse of those ninety miles of Athabasca Rapids has given us respect for the labor and determination which in this wilderness has erected these giant derricks. Looking at them, we waft a wish that the plucky prospector may reap his reward and abundantly strike oil. The Count tells us of striking one hundred and fifty feet of rock salt while \"punching\" one of his oil-shafts through the ground. Here are overhanging dykes of limestone; and out of the lime and clay shoot up splendid trees of pine, poplar, and spruce."
+        },
+        {
+          "index": 8,
+          "text": "who prayed \"O, Lord, we beseech Thee, send down Thy covenanted blessin' on the Muckle Hebrides, the Lesser Hebrides, and the adjacent islands of Great Britain and Ireland.\" Talking with the old gentleman, you are conscious of the innate moral strength rather than the mechanical skill of the craftsman. Instinctively you feel the splendid power of his presence and come out from his forge murmuring, \"Thank God I have seen a _man_ this day.\" Wyllie belongs to the age of the old journals, to the days that bred Joe Gargerys and old Adams in whom appeared \"the constant service of the antique world.\""
+        },
+        {
+          "index": 9,
+          "text": "This is the general rule. Broadly speaking, the north shore of Athabasca Lake to-day forms the southern limit of the caribou range, while the Mackenzie River makes a natural dividing-line between eastward and westward branches of the caribou family. But the trend of this mighty migration will not be pent between mathematical lines of limitation, and the direction of prevailing winds may turn the numberless hosts and divert them from their line of march. Individuals and scattered bands, indeed, have been known not to migrate at all. Fifteen years ago in the last days of July, in latitude 62� 15' North, the Tyrrell Brothers saw a herd of caribou which they estimate contained over one hundred thousand individuals. In 1877 a line of caribou crossed Great Slave Lake near Fort Rae on the ice. It took them two weeks to pass that point, and, in the words of an eye-witness, \"daylight could not be seen through the column.\""
+        },
+        {
+          "index": 10,
+          "text": "In some parts of the United States an ingenious by-industry to the fur-trade has arisen, for the offered-bounty destructive animals are carefully reared in illicit kindergartens. As some states pay for the scalps of these animal pests and other states for the tails, the undertaking is interesting and profitable. The only gamble is in the nursery. When the gladsome breeder gets his wild-cat or coyote big enough to market, it is \"heads I win, tails you lose.\" The United States, in twenty-five years, has paid two and a half millions in wild animal bounties. California paid in a year and a half $190,000 on coyotes alone, and no breed of noxious animals is yet extinct."
+        },
+        {
+          "index": 11,
+          "text": "Sometimes, though, the Indian scores one on the white. This was markedly the case when the first treaty payments were made at Lesser Slave. Two young Jews had followed the treaty party all the way in from Edmonton with an Old Aunt Sally stand where you throw wooden balls at stuffed figures at ten shies for a quarter. \"Every time you hit 'em, you get a see-gar!\" They thought they were going to clear out the Indians, but it took a bunch of Lesser Slave braves just an hour and a quarter to break the bank at Monte Carlo. As an appreciative onlooker reported, \"Them chaps pinked them dolls every time.\""
+        },
+        {
+          "index": 12,
+          "text": "Missionaries of the present day are not without their troubles. Mrs. Day tells of potato-whiskey making in some illicit still back in the mosquito-woods, the results of which she fears; and, even as we speak, an Indian lunatic pokes his head through the palings of the potato-patch. From far back in Fort Nelson, British Columbia, and from Fort Liard, the Hudson's Bay men have come to make their reports to Mr. Brabant at Simpson. They brought their wives and babies with them, brought also a quantity of beautiful porcupine-quill work, Fort Liard being one of the few places in the North where this art flourishes. Tomorrow they will start back, tacking against the stream, as the imported brides are doing before them."
+        },
+        {
+          "index": 13,
+          "text": "Seldom have we seen a more beautiful vista than the up-climbing path leading from the shore to the Roman chapel at the head of the hill. It is bordered by flaming fireweed and lined with the eager faces of children dressed in their Sunday best, ready for morning mass and awaiting the blessing of their Bishop. Wherever the willow-herb flourishes there a Guadet is serving The Company. One was in charge at lonely Wrigley, and we find his brother here."
+        },
+        {
+          "index": 14,
+          "text": "How does it work out? For ten days I sat round their hospitable fire trying hard for the viewpoint of each member of this Farthest North family of fellow-Canadians. I have lived under many roof-trees, but never have I seen a more harmonious family, nor a m�nage of nicer adjustment. Mrs. Oo-vai-oo-ak the Elder, full of the mellow juice of life, waggish and keen, \"quick at the uptak',\" as the Scotch say, presides over her household with dignity, never for a moment relaxing her hold on the situation. Chief Oo-vai-oo-ak wisely leaves the interior economy of the household in the hands of the women. He is the quiet, dignified gentleman with an easy manner that courtiers and plenipotentiaries extraordinary might envy. His six feet two inches of height, magnificent physique and superb carriage would mark him out as a man of distinction at any race-course, polo-meet, or political reception where men of the world forgather."
+        },
+        {
+          "index": 15,
+          "text": "We respect the Eskimo for many things: for his physical courage as he approaches the bear in single combat, for his uncomplaining endurance of hardships, for his unceasing industry, the cleverness of his handicraft, his unsullied integrity, sunny good-humour, and simple dignity. But, most of all, he claims my respect for the way he brings up his children. \"A babe in the house is a well-spring of pleasure,\" is a pretty theory, but Charles Lamb reminds us that each child must stand on his own footing as an individual, and be liked or disliked accordingly. In the igloo and the tupik the child has his own accorded place and moves in and out of the home and about his occupations with that hard-to-describe air of assuredness that so distinguishes his father and mother."
+        },
+        {
+          "index": 16,
+          "text": "When an Eskimo wife has finished making her spouse a pair of waterproof boots, she hands them to him, and he blows them up. If there is one little pin-hole and the air oozes out, he throws the boots back to her, and she may take up the pedal gauntlet in one of two ways. Either she must meekly start to make a new pair of boots without murmuring a word, or leave it open to him to take to his bosom another conjugal bootmaker. We noticed with interest in watching this little tableau that there was no recrimination. No word was spoken on either side, the exacting husband contenting himself with blowing up the boots and not the wife."
+        },
+        {
+          "index": 17,
+          "text": "With two modifications, this Eskimo is invariably truthful. Like the Indians to the south of him, seeking to please you by answering a question in the way that you desire, he will at times tell you an untruth, for it seems to him discourteous to answer your question other than in the way which you anticipate. For instance, if you say to Roxi, \"Wasn't that a grey goose we heard overhead?\" Roxi will readily assent, though he well knows it to have been a mallard duck, but he would spare your ignorance. Again, it is Eskimo etiquette to belittle your own success in hunting and, in so doing, be not literally truthful. When we place this delightful trait alongside the fish-stories we are familiar with, who would seek to change the heathen?"
+        },
+        {
+          "index": 18,
+          "text": "Cannibalism was not unknown. The winter of 1841-2 was an especially hard one. On the 18th March, 1841, J. William Spence and Murdock Morrison were dispatched with the winter express from Fort Good Hope to Fort Macpherson. During the second night out, while they were asleep in the encampment, they were knocked on the head by four starving Indian women, immediately cut to pieces, and devoured. It is further reported that these women previously had killed and eaten their husbands and all their children except one little boy. Of the two murdered Scots they ate what they could that night and made pemmican of what was over, reporting afterward that one was sweet but that the other, tasting of tobacco, was not so good."
+        },
+        {
+          "index": 19,
+          "text": "Whalers themselves on this grim shore die without requiem. Every year men desert from the ships. They make their way across from Herschel to a mainland of whose geography they know nothing, thinking that once they strike the shore they can find railway trains which will take them to the gold-mines. One man, Morand, left his ship without sled or dogs. He carried only a gun, twenty rounds of ammunition, some cigarette papers and tobacco. In the spring they found him about a day's journey from the ship, frozen to death. He sat with his gun leaning against his left arm, and a cigarette in his mouth. Both feet and one hand were eaten off. He had fired off nine shots, probably as a signal which was never heard."
+        },
+        {
+          "index": 20,
+          "text": "Our arrival at Chipewyan is opportune. Honorine Daniels, unceremoniously known as 'Norine among her friends (and they are legion), is about to join hand and fortune with one of the Mercredi boys. 'Norine owns a cottage in her own right, and to-night under her roof-tree there is to be a wedding-dance. We wait round, hungering for an invitation, finally to be told largely, \"You don't need no invitation, everybody goes.\""
+        },
+        {
+          "index": 21,
+          "text": "Right up to the door of the mill extends the sixty-acre wheat-field of the H.B. Company, from which Mr. Wilson computes that he will this year thrash two thousand bushels. If the H.B. wheat-field were to sell the H.B. mill these two thousand bushels at $1.25 a bushel (the ruling Vermilion price), there would be a net profit of $1500, after paying all expense of culture, to the credit of one branch of Mr. Wilson's commercial institution. For thirty years, wheat, oats, barley, and vegetables have been grown in Vermilion, not as an experiment, but as regular commercial crops. Cereals are sown late in April or early in May, and the harvest is gathered in August. More than once, wheat has matured in eighty-six days from seed-sowing to seed-garnering."
+        },
+        {
+          "index": 22,
+          "text": "At Peace River Crossing we say good-bye to the Gaudets, whose home is here. While they have been making a little summer jaunt to Fort Good Hope under the Arctic Circle the garden-seeds they sowed before they left have not been idle. Mr. Gaudet shows us a pumpkin which weighs twenty-five pounds, a squash of the same weight, and citron melons, which weigh over ten pounds each."
+        },
+        {
+          "index": 23,
+          "text": "Edmonton once more. Two Spanish sailors shipwrecked and navigating the Pacific on a log, search the shore for a sign. Into what land are they drifting? The one at the bow (does a log have a bow?) sees something through the haze--\"_Gracias a Dios_! Praise be to God, it is a Christian country! I see the gallows!\" We too get our sign. We reach Edmonton on Convocation Day."
+        },
+        {
+          "index": 24,
+          "text": "DOWN RETURN DOWN RETURN STREAM UPSTREAM STREAM UPSTREAM 0 Peace River Crossing Or, having arrived at Peace River 280 Fort Vermilion $15.00 $25.00 $1.00 $3.00 Crossing, the traveller may go down the Peace.-- 330 Chutes of the Peace 17.00 30.00 1.75 4.00 By the H.B. SS. _Peace River_, from From June to August Peace River Crossing to the Chutes inclusive.[3] of the Peace. 570 Fort Chipewyan 37.00 60.00 3.25 7.00 By H.B. SS. _Grahame_ or Tug _Primrose_, from Chutes of the Peace to Fort Chipewyan."
+        }
+      ],
+      "epubListed": false,
+      "source": "https://archive.org/details/thenewnorth12874gut",
+      "textSource": "https://archive.org/download/thenewnorth12874gut/12874-8.txt",
+      "formatsSource": "https://www.gutenberg.org/ebooks/12874",
+      "rights": "Mirror records NOT_IN_COPYRIGHT in the United States; confirm rights where you are.",
+      "wordCountMethod": "Approximate words in mirrored plain text, excluding recognized Gutenberg licence delimiters; may include front matter."
+    }
+  ]
+}

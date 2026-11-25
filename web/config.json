@@ -39,6 +39,42 @@
       "from": "1700",
       "to": "1930",
       "sort": "old"
+    },
+    {
+      "label": "Canadian authors \u00b7 Montgomery",
+      "query": "L. M. Montgomery",
+      "field": "author",
+      "from": "",
+      "to": "",
+      "access": "any",
+      "sort": "old"
+    },
+    {
+      "label": "Canadian authors \u00b7 Leacock",
+      "query": "Stephen Leacock",
+      "field": "author",
+      "from": "",
+      "to": "",
+      "access": "any",
+      "sort": "old"
+    },
+    {
+      "label": "Nova Scotia subjects",
+      "query": "Nova Scotia",
+      "field": "subject",
+      "from": "",
+      "to": "",
+      "access": "any",
+      "sort": "old"
+    },
+    {
+      "label": "British Columbia subjects",
+      "query": "British Columbia",
+      "field": "subject",
+      "from": "",
+      "to": "",
+      "access": "any",
+      "sort": "old"
     }
   ],
   "pageSize": 12,

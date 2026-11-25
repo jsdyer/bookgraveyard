@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "wordsPerMinute": 250,
+  "books": [
+    {
+      "id": "anneofgreengable00045gut",
+      "gutenbergId": 45,
+      "region": "Prince Edward Island",
+      "shelf": "Canadian authors"
+    },
+    {
+      "id": "sunshinesketches03533gut",
+      "gutenbergId": 3533,
+      "region": "Ontario",
+      "shelf": "Canadian authors"
+    },
+    {
+      "id": "theclockmakerort05817gut",
+      "gutenbergId": 5817,
+      "region": "Nova Scotia",
+      "shelf": "Nova Scotia"
+    },
+    {
+      "id": "thenewnorth12874gut",
+      "gutenbergId": 12874,
+      "region": "British Columbia author / northern Canada journey",
+      "shelf": "British Columbia"
+    }
+  ]
+}

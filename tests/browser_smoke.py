@@ -46,19 +46,31 @@ def main():
 
                 page.route('https://openlibrary.org/**', source)
                 page.goto(f'http://127.0.0.1:{server.server_port}/bookgraveyard/')
-                page.locator('.book-card').first.wait_for()
+                page.locator('#results .book-card').first.wait_for()
                 # Assert source text: the caption is visually uppercased by CSS.
                 assert 'Retained opening search' in page.locator('#capture-label').text_content()
                 assert len(requests) == 0, 'Page load must not query the provider'
-                initial_count = page.locator('.book-card').count()
+                initial_count = page.locator('#results .book-card').count()
+                page.locator('#canadian-books article').first.wait_for()
+                page.locator('#canadian-group').select_option('Nova Scotia')
+                assert page.locator('#canadian-books article').count() > 0
+                page.locator('#canadian-random').click()
+                assert len(page.locator('#canadian-passage blockquote').inner_text()) > 100
+                page.get_by_role('button',name='Save to Canadian list',exact=True).first.click()
+                page.locator('#canadian-saved').check()
+                assert page.locator('#canadian-books article').count() == 1
+                page.locator('#canadian-speed').fill('300')
+                assert '300 words/minute' in page.locator('#canadian-books').inner_text()
+                page.locator('#canadian-group').select_option('')
+                page.locator('#canadian-saved').uncheck()
                 page.locator('#query').fill('papermaking')
                 page.locator('#field').select_option('subject')
                 page.locator('#search').click()
                 page.wait_for_function("document.querySelector('#capture-label').textContent.startsWith('Live search')")
                 assert 'subject=papermaking' in requests[-1]
-                assert page.locator('.book-card').count() == initial_count
-                assert page.locator('.book-card img').count() == 0
-                assert '<img src=x' in page.locator('.book-card h3').first.text_content()
+                assert page.locator('#results .book-card').count() == initial_count
+                assert page.locator('#results .book-card img').count() == 0
+                assert '<img src=x' in page.locator('#results .book-card h3').first.text_content()
                 page.get_by_role('button', name='+ Your shelf', exact=True).first.click()
                 assert page.locator('#shelf-count').text_content() == '1'
                 with page.expect_download() as saved:
@@ -74,7 +86,7 @@ def main():
                 page.locator('#remember').uncheck()
                 assert page.evaluate("localStorage.getItem('coolcode:bookgraveyard:shelf') === null")
                 comparison_key = seed['editions'][0]['work'].split('/')[-1]
-                page.locator('.book-card').filter(has_text=comparison_key).get_by_role('button', name='Compare editions', exact=True).click()
+                page.locator('#results .book-card').filter(has_text=comparison_key).get_by_role('button', name='Compare editions', exact=True).click()
                 page.locator('.edition-option').first.wait_for()
                 page.locator('.edition-option input').nth(0).check()
                 page.locator('.edition-option input').nth(1).check()
@@ -84,7 +96,7 @@ def main():
                 page.locator('#query').fill('different failure query')
                 page.locator('#search').click()
                 page.wait_for_function("document.querySelector('#status').textContent.includes('Previous results are unchanged')")
-                assert page.locator('.book-card').count() == initial_count
+                assert page.locator('#results .book-card').count() == initial_count
                 page.screenshot(path=str(screenshots/'desktop.png'), full_page=True)
                 page.set_viewport_size({'width':390,'height':844})
                 assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
