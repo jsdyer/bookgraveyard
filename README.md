@@ -68,3 +68,5 @@ Run `python3 scripts/refresh_canadian.py` manually. It requires the mirror’s e
 EPUB availability is read from the exact mirror’s file list, never inferred from a filename or another edition. The stable Gutenberg record link offers its current formats; those may differ from the mirror. Our source check found Gutenberg’s website returning503 from this environment, so Gutenberg download availability is deliberately not labelled verified. The Archive text mirrors were fetched successfully.
 
 Canadian-list book IDs persist only when Save is chosen, under `coolcode:bookgraveyard:canadian-list`, separate from the older general shelf. JSON import/export includes only IDs; no passage or visitor query is uploaded. The random button chooses among saved sample passages and explicitly does not claim a printed-page number.
+
+An optional `epubCatalogue` can identify a reviewed Standard Ebooks publication page. The collector checks that it currently offers an EPUB link, and the UI labels it as a separate edition. It never treats that EPUB as the same text/word count or a verified download of the Archive mirror.

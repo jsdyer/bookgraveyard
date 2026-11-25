@@ -34,7 +34,11 @@ def capture(config):
         if not plain:raise ValueError('No plain text mirror')
         url='https://archive.org/download/'+id+'/'+urllib.parse.quote(plain['name'])
         raw=get(url);text=raw.decode('utf-8-sig',errors='replace');words,passages=prepare(text)
-        books.append({**entry,'title':meta.get('title',id),'author':meta.get('creator',''),'checkedAt':checked,'wordCount':words,'passages':passages,'epubListed':any('epub' in f.get('format','').lower() for f in files),'source':'https://archive.org/details/'+id,'textSource':url,'formatsSource':'https://www.gutenberg.org/ebooks/'+str(entry['gutenbergId']),'rights':'Mirror records NOT_IN_COPYRIGHT in the United States; confirm rights where you are.','wordCountMethod':'Approximate words in mirrored plain text, excluding recognized Gutenberg licence delimiters; may include front matter.'})
+        epub_source=entry.get('epubCatalogue','');epub_offered=False
+        if epub_source:
+            if not re.fullmatch(r'https://standardebooks\.org/ebooks/[a-z0-9-]+/[a-z0-9-]+',epub_source):raise ValueError('Unsupported EPUB catalogue URL')
+            html=get(epub_source).decode('utf-8');epub_offered=bool(re.search(r'href="[^"]+\.epub"',html))
+        books.append({'epubCatalogue':epub_source,'epubOffered':epub_offered,'epubCatalogueCheckedAt':checked if epub_source else None,**entry,'title':meta.get('title',id),'author':meta.get('creator',''),'checkedAt':checked,'wordCount':words,'passages':passages,'epubListed':any('epub' in f.get('format','').lower() for f in files),'source':'https://archive.org/details/'+id,'textSource':url,'formatsSource':'https://www.gutenberg.org/ebooks/'+str(entry['gutenbergId']),'rights':'Mirror records NOT_IN_COPYRIGHT in the United States; confirm rights where you are.','wordCountMethod':'Approximate words in mirrored plain text, excluding recognized Gutenberg licence delimiters; may include front matter.'})
     return {'schema':'bookgraveyard.canadian.v1','checkedAt':checked,'books':books}
 if __name__=='__main__':
     result=capture(json.loads((ROOT/'web/canadian-config.json').read_text()));target=ROOT/'web/data/canadian.json';temporary=target.with_suffix('.tmp');temporary.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');temporary.replace(target);print('Saved',len(result['books']),'books and bounded passage samples')

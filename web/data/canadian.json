@@ -114,7 +114,10 @@
       "textSource": "https://archive.org/download/anneofgreengable00045gut/anne11.txt",
       "formatsSource": "https://www.gutenberg.org/ebooks/45",
       "rights": "Mirror records NOT_IN_COPYRIGHT in the United States; confirm rights where you are.",
-      "wordCountMethod": "Approximate words in mirrored plain text, excluding recognized Gutenberg licence delimiters; may include front matter."
+      "wordCountMethod": "Approximate words in mirrored plain text, excluding recognized Gutenberg licence delimiters; may include front matter.",
+      "epubCatalogue": "https://standardebooks.org/ebooks/l-m-montgomery/anne-of-green-gables",
+      "epubOffered": true,
+      "epubCatalogueCheckedAt": "2026-11-25T13:15:18.678524+00:00"
     },
     {
       "id": "sunshinesketches03533gut",
