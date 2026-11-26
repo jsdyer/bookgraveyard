@@ -3,7 +3,7 @@
 A small, public browser catalogue for rediscovering books, comparing editions and following original reading links. Live site: [coolcode.ca/bookgraveyard/](https://coolcode.ca/bookgraveyard/).
 
 <!-- coolcode:guide -->
-Search any title, author, subject or set of words, optionally limiting the work's first-publication years and Open Library's access category. The starting searches are editable suggestions, not a fixed collection. Results are paginated. Open **Compare editions** on a work, then choose two publication records to compare publisher, date, language, pages, format and ISBN. A work groups editions; its first-publication year and reading-access label do not describe every edition.
+Search any title, author, subject or set of words, optionally limiting the work's first-publication years and Open Library's access category. The starting searches are editable suggestions, not a fixed collection. Results are paginated. Open **Compare editions** on a work, then choose two publication records to compare publisher, date, language, pages, format and ISBN. Use an edition’s ISBN/OCLC/LCCN to find linked digitized volumes at HathiTrust, or enter an identifier directly. HathiTrust access labels are explicitly US labels; confirm access from your own location. A work groups editions; its first-publication year and reading-access label do not describe every edition.
 
 The opening screen uses a small, dated real Open Library capture. **Search books** retrieves live results directly from Open Library; failures preserve the previous results. Add books to a reading shelf, export JSON/CSV, or import a saved search/shelf JSON locally. The shelf stays in the current tab unless **Remember this shelf on this device** is selected. A readable-copy label is not a worldwide public-domain determination, and borrowing can require an Open Library/Internet Archive account. “Graveyard” is a discovery theme, not a claim that titles are forgotten or out of print.
 
@@ -70,3 +70,11 @@ EPUB availability is read from the exact mirror’s file list, never inferred fr
 Canadian-list book IDs persist only when Save is chosen, under `coolcode:bookgraveyard:canadian-list`, separate from the older general shelf. JSON import/export includes only IDs; no passage or visitor query is uploaded. The random button chooses among saved sample passages and explicitly does not claim a printed-page number.
 
 An optional `epubCatalogue` can identify a reviewed Standard Ebooks publication page. The collector checks that it currently offers an EPUB link, and the UI labels it as a separate edition. It never treats that EPUB as the same text/word count or a verified download of the Archive mirror.
+
+## HathiTrust linked copies
+
+The [Bibliographic API](https://www.hathitrust.org/member-libraries/resources-for-librarians/data-resources/bibliographic-api/) accepts ISBN, OCLC, LCCN, volume ID and catalogue record number. This is an identifier lookup, not a title/keyword search. Compare an Open Library edition, then choose **Find digitized copies at HathiTrust**, or use the separate identifier form. Inspect titles/editions before assuming two records describe the same publication.
+
+Only the selected identifier is sent to `catalog.hathitrust.org`; no lookup occurs on page load. Requests are on demand, bounded to one at a time with a short gap, a 25-second timeout, a one-minute pause after HTTP429, and a 30-response tab cache. No key, JSONP script or proxy is used. The documented endpoint supplies CORS headers; if it is unavailable, prior results remain and the source-response link is available. `usRightsString` is shown as a **US access label**, not a guarantee of Canadian access or unrestricted downloads. The source update date and our check date remain separate.
+
+There are no new scheduled collectors or credentials for this addition. The existing Canadian shelf collector and original Open Library saved receipts are unchanged.

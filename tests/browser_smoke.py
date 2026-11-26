@@ -44,6 +44,7 @@ def main():
                         payload['docs'][0]['title'] = '<img src=x onerror=alert(1)> Test metadata'
                         route.fulfill(json=payload, headers={'Access-Control-Allow-Origin':'*'})
 
+                page.route('https://catalog.hathitrust.org/api/**', lambda route: route.fulfill(json={'records': {'1': {'titles': ['Digitized test volume'], 'recordURL': 'https://catalog.hathitrust.org/Record/000000001'}}, 'items': [{'fromRecord': '1', 'itemURL': 'https://babel.hathitrust.org/cgi/pt?id=mdp.1', 'usRightsString': 'Full View', 'rightsCode': 'pd', 'orig': 'Test institution', 'lastUpdate': '20260101'}]}, headers={'Access-Control-Allow-Origin':'*'}))
                 page.route('https://openlibrary.org/**', source)
                 page.goto(f'http://127.0.0.1:{server.server_port}/bookgraveyard/')
                 page.locator('#results .book-card').first.wait_for()
@@ -92,6 +93,11 @@ def main():
                 page.locator('.edition-option input').nth(1).check()
                 assert page.locator('#comparison article').count() == 2
                 page.locator('#close-editions').click()
+                page.locator('#hathi-type').select_option('oclc')
+                page.locator('#hathi-id').fill('424023')
+                page.locator('#hathi-submit').click()
+                page.locator('#hathi-results article').first.wait_for()
+                assert 'US access label: Full View' in page.locator('#hathi-results').inner_text()
                 fail['value'] = True
                 page.locator('#query').fill('different failure query')
                 page.locator('#search').click()
